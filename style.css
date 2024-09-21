@@ -1,0 +1,18 @@
+/* Hintergrundfarbe des Dokuments */
+
+body {
+    background-color: rgb(20, 219, 193);
+}
+
+/* Huntergrundfarbe des Headers */
+
+header {
+    background-color: rgb(4, 0, 255);
+}
+
+.name-dario {
+    font-style: italic;
+    font-size: 60px;
+    color: aliceblue;
+    align-items: center;
+}
