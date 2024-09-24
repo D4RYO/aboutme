@@ -1,24 +1,24 @@
 .name-dario {
     font-size: 60px;
-align-items: center;
+    align-items: center;
 }
 
 .dark-mode {
-background-color: black;
-color: white;
+    background-color: black;
+    color: white;
 }
 
 :root {
-    --bg-color: #White;
-    --second-color: "Blue";
-    --text-color: #ffffff;
-    --main-color: Black;
+    --bg-color: #ffffff;
+    --second-color: #000000 ;
+    --text-color: #000000;
+    --main-color: #ffffff;
 }
 
 .knopf-lebenslauf {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background:  var(--main-color);
+    background: var(--main-color);
     border-radius: 4rem;
     box-shadow: 0 0 1rem var(--main-color);
     font-size: 1.6rem;
