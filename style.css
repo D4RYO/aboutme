@@ -43,7 +43,7 @@ color: white;
     }
   }
 
-  .profilbild {
+  #host::(.profilbild) {
     animation:
       bounce 300ms
       alternate infinite
