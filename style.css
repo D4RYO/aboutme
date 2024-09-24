@@ -1,9 +1,51 @@
 .name-dario {
-        font-size: 60px;
-    align-items: center;
+    font-size: 60px;
+align-items: center;
 }
 
 .dark-mode {
-    background-color: black;
-    color: white;
+background-color: black;
+color: white;
 }
+
+/* ==================== Bild schweben lassen ==================== */ /*https://www.joshwcomeau.com/animation/keyframe-animations/ */
+/*@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);
+    }
+}
+/* Hier wird nur auf die Klasse profilbild referiert, da dies so als Class im index.html File hinterlegt wurde */
+/*.profilbild {
+    animation: float 1s ease-in-out infinite;
+}
+
+/* ==================== Bild einfliegen lassen ==================== */
+/*@keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+.profilbild {
+    animation: slide-in 1000ms;}
+
+ /* ==================== Bild hüpfen lassen ==================== */   
+ @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+
+  .profilbild {
+    animation:
+      bounce 300ms
+      alternate infinite
+      cubic-bezier(.2, .65, .6, 1);
+  }
