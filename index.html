@@ -1,49 +1,51 @@
-<!DOCTYPE html>
+.name-dario {
+    font-size: 60px;
+align-items: center;
+}
 
-<html lang="de">
+.dark-mode {
+background-color: black;
+color: white;
+}
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mein Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+/* ==================== Bild schweben lassen ==================== */ /*https://www.joshwcomeau.com/animation/keyframe-animations/ */
+/*@keyframes float {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0);
+    }
+}
+/* Hier wird nur auf die Klasse profilbild referiert, da dies so als Class im index.html File hinterlegt wurde */
+/*.profilbild {
+    animation: float 1s ease-in-out infinite;
+}
 
-  <body>
+/* ==================== Bild einfliegen lassen ==================== */
+/*@keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
 
-    <header>
-        <center><h1 class = "name-dario">Dario Knezevic</h1></center>
-    </header>
+.profilbild {
+    animation: slide-in 1000ms;}
 
-    <section>
+ /* ==================== Bild hüpfen lassen ==================== */   
+ @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
 
-      <center><img src="https://1drv.ms/i/s!Ah65jb2ZxJSN3FFMZqSIQOJuh2tV?embed=1&width=568&height=439" alt="Dario Knezevic Profilbild" class ="profilbild"></center>
-    </section>
-    <section>
-        <p>.</p>
-        <p>.</p>
-        <center><h2>Über mich</h2></center>
-        <center></h2><p>Hier kommt ein kurzer Text über mich</p></center>
-    </section>
-
-    <section>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <center><h2>Projekte</h2></center>
-        <center><p>Projekte hier anzeigen</p></center>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <center><a href="https://www.linkedin.com/in/knezevicdario/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/LinkedIn_logo.svg/1920px-LinkedIn_logo.svg.png" alt="Dario Knezevic LinkedIn Profile" width="240" height="60"></a></center>
-    </section>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <center><button id="darkmode">Dark & Light Mode</button>
-    
-    <script src="script.js"></script>
-
-  </body>
-
-</html>
+  .profilbild {
+    animation:
+      bounce 300ms
+      alternate infinite
+      cubic-bezier(.2, .65, .6, 1);
+  }
