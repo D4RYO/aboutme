@@ -1,28 +1,21 @@
 .name-dario {
     font-size: 60px;
-    align-items: center;
+align-items: center;
 }
 
 .dark-mode {
-    background-color: black;
-    color: white;
-}
-
-:root {
-    --bg-color: #ffffff;
-    --second-color: #000000 ;
-    --text-color: #000000;
-    --main-color: #ffffff;
+background-color: black;
+color: white;
 }
 
 .knopf-lebenslauf {
     display: inline-block;
     padding: 1rem 2.8rem;
-    background: var(--main-color);
+    background: #000000;
     border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: #000000;
     font-size: 1.6rem;
-    color: var(--second-bg-color);
+    color: white;
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
@@ -30,7 +23,6 @@
 
 .knopf-lebenslauf:hover {
     box-shadow: none;
-}
 
 /* ==================== Bild schweben lassen ==================== */ /*https://www.joshwcomeau.com/animation/keyframe-animations/ */
 /*@keyframes float {
@@ -73,3 +65,4 @@
       alternate infinite
       cubic-bezier(.2, .65, .6, 1);
   }
+}
