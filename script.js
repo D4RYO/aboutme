@@ -71,3 +71,13 @@ function animate() {
 }
 
 animate();
+
+// CSS to remove margin and hide overflow
+const style = document.createElement('style');
+style.innerHTML = `
+body {
+  margin: 0;
+  overflow: hidden;
+}
+`;
+document.head.appendChild(style);
