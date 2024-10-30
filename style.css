@@ -1,4 +1,36 @@
 body {
-  margin: 0;
-  overflow: hidden;
+    font-family: 'Arial, sans-serif';
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    color: #333;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-me {
+    background-color: #f7f9fc;
+    padding: 60px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.about-me img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.about-me h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    font-size: 1.2em;
+    line-height: 1.6;
 }
