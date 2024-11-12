@@ -7,11 +7,30 @@ body {
     overflow: hidden;
 }
 
+.logo-intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    font-size: 3em;
+    animation: fadeOut 3s forwards 3s;
+}
+
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 section {
     padding: 60px 20px;
     text-align: center;
     position: relative;
     z-index: 1;
+    display: none;
 }
 
 .about-me {
