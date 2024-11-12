@@ -5,10 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intro Seite</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Arial, sans-serif';
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Schwarzer Hintergrund */
+            color: #fff; /* Weiße Schriftfarbe für besseren Kontrast */
+            overflow: hidden;
+        }
+
+        .logo-intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* Schwarzer Hintergrund */
+            animation: fadeOut 3s forwards 3s;
+        }
+
+        .logo-intro img {
+            max-width: 100%;
+            height: auto;
+            animation: rotateYAndFadeOut 3s forwards 3s;
+        }
+
+        .logo-intro h1 {
+            margin-top: 20px;
+            font-size: 2em;
+            color: #fff; /* Weiße Schriftfarbe */
+        }
+
+        @keyframes fadeOut {
+            to {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+
+        @keyframes rotateYAndFadeOut {
+            to {
+                transform: rotateY(180deg);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="logo-intro">
         <img src="https://1drv.ms/i/s!Ah65jb2ZxJSN3Q_rOQE4mp0xU7vR?embed=1&width=257&height=241" alt="Logo">
+        <h1>Dario Knezevic</h1>
     </div>
 
     <script>
