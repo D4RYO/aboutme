@@ -19,11 +19,72 @@ body {
 .logo-intro img {
     max-width: 100%;
     height: auto;
+    filter: brightness(); /* Helligkeit des Bildes beibehalten */
 }
 
 @keyframes fadeOut {
     to {
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    display: none;
+}
+
+.about-me {
+    background-color: rgba(247, 249, 252, 0.9);
+    padding: 60px 20px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.about-me img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.about-me h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.about-me p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+.scrolling-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    white-space: nowrap;
+}
+
+.scrolling-background span {
+    display: inline-block;
+    font-size: 5em;
+    opacity: 0.1;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }
