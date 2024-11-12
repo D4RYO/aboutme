@@ -13,9 +13,13 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #282c34;
-    color: white;
-    font-size: 3em;
     animation: fadeOut 3s forwards 3s;
+}
+
+.logo-intro img {
+    max-width: 100%;
+    height: auto;
+    filter: brightness(0.8); /* Macht das Bild dunkler */
 }
 
 @keyframes fadeOut {
