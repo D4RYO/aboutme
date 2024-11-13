@@ -66,7 +66,7 @@ section {
     padding: 20px;
     color: white;
     flex-grow: 1;
-    margin-right: 100px; /* Ensure sections do not overlap with nav */
+    margin-left: 100px; /* Ensure sections do not overlap with nav */
 }
 
 #home {
