@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    color: white;
+}
+
+#home {
+    background-color: grey;
+}
+
+#about-me {
+    background-color: red;
+}
+
+#projects {
+    background-color: green;
+}
+
+#skills {
+    background-color: orange;
+}
+
+#contact {
+    background-color: purple;
+}
+
+footer {
+    background-color: blue;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
