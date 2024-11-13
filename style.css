@@ -82,10 +82,12 @@ section {
 #divlinks {
     background-color: slateblue;
     float: left;
+    width: 50%; /* Adjust width to split the section */
 }
 #divrechts {
     background-color: lightcoral;
     float: right;
+    width: 50%; /* Adjust width to split the section */
 }
 
 #home .portrait {
