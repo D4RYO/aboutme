@@ -9,7 +9,37 @@ body {
     background-color: black;
     flex-direction: column; /* Ensure body content is vertical */
 }
-
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    font-style: bold;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px goldenrod;
+    z-index: 10;
+}
+.dropdown-content a {
+    color: white;
+    font-style: bold;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {
+    background-color: goldenrod;
+    color: black;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn img {
+    width: 50px; /* Adjust the size as needed */
+    height: auto;
+}
 /* Adjust header to account for the fixed nav */
 header {
     background-color: rgb(0, 0, 0);
@@ -18,14 +48,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(100% - 100px); /* Adjust width to leave more space for the nav */
+    width:fit-content
     top: 0;
     z-index: 1000;
     position: relative;
-    margin-left: 50px; /* Ensure header does not overlap with nav */
+    margin-left: 300px; /* Ensure header does not overlap with nav */
+    margin-right: 300px; /* Ensure header does not overlap with nav */
 }
 h1{
-    color: rgb(146, 146, 146);
+    color: goldenrod;
     font-size: 4em;
     font-weight: 900;
     line-height: 1.1;
@@ -46,58 +77,27 @@ header .logo img {
     height: auto;
 }
 
-/* NAVIGATIONSBAR */
-nav {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 60px;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 15px 0;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    writing-mode: vertical-rl;
-    transform: rotate(180deg);
-}
-
 section {
     padding: 20px;
     color: rgb(255, 255, 255);
     flex-grow: 1;
-    margin-left: 100px; /* Ensure sections do not overlap with nav */
+    margin-left: 200px; /* Ensure content does not overlap with nav */
 }
 
 #home {
     background-color: rgb(0, 0, 0);
     display: flex; /* Use flexbox to split the section */
+    margin-bottom: 400px;
 }
 
 #divlinks {
-    background-color: rgb(50, 105, 161);
+    background-color: rgb(0, 0, 0);
     float: left;
     width: 50%; /* Adjust width to split the section */
     margin-left: 200px;
 }
 #divrechts {
-    background-color: rgb(168, 107, 107);
+    background-color: rgb(0, 0, 0);
     float: right;
     width: 50%; /* Adjust width to split the section */
     margin-right: 300px;
@@ -108,37 +108,32 @@ section {
     max-width: 100%; /* Increase the maximum width of the image */;
     animation: float 2s ease-in-out infinite;
     border-radius: 300%; /* Make the image round */
+    object-fit: property; /* Ensure the image does not stretch */
 }
 
-/*Aniation für das Bild*/
-@keyframes float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-
-}
 
 #about-me {
-    background-color: red;
+    background-color: rgb(0, 0, 0);;
+    margin-top: 100px;
 }
 
 #projects {
-    background-color: green;
+    background-color: rgb(0, 0, 0);
+    margin-top: 100px;
 }
 
 #skills {
-    background-color: orange;
+    background-color: rgb(0, 0, 0);
+    margin-top: 100px;
 }
 
 #contact {
-    background-color: purple;
+    background-color: rgb(0, 0, 0);
+    margin-top: 100px;
 }
 
 footer {
-    background-color: blue;
+    background-color: rgb(0, 0, 0);
     color: white;
     text-align: center;
     padding: 10px;
