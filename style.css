@@ -22,7 +22,7 @@ header {
     top: 0;
     z-index: 1000;
     position: relative;
-    margin-left: 100px; /* Ensure header does not overlap with nav */
+    margin-left: 50px; /* Ensure header does not overlap with nav */
 }
 h1{
     color: rgb(146, 146, 146);
@@ -91,25 +91,34 @@ section {
 }
 
 #divlinks {
-    background-color: slateblue;
+    background-color: rgb(50, 105, 161);
     float: left;
     width: 50%; /* Adjust width to split the section */
+    margin-left: 200px;
 }
 #divrechts {
-    background-color: lightcoral;
+    background-color: rgb(168, 107, 107);
     float: right;
     width: 50%; /* Adjust width to split the section */
+    margin-right: 300px;
+    height: 500px;
 }
 
-#home .portrait {
-
-    text-align: center; /* Center the portrait */
+.portrait img {
+    max-width: 100%; /* Increase the maximum width of the image */;
+    animation: float 2s ease-in-out infinite;
+    border-radius: 300%; /* Make the image round */
 }
 
-#home .portrait img {
-    max-width: 100%; /* Increase the maximum width of the image */
-    height: 700;
-    
+/*Aniation für das Bild*/
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+
 }
 
 #about-me {
