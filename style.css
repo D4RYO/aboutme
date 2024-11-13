@@ -9,37 +9,7 @@ body {
     background-color: black;
     flex-direction: column; /* Ensure body content is vertical */
 }
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #000000;
-    font-style: bold;
-    min-width: 100px;
-    box-shadow: 0px 8px 16px 0px goldenrod;
-    z-index: 10;
-}
-.dropdown-content a {
-    color: white;
-    font-style: bold;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-.dropdown-content a:hover {
-    background-color: goldenrod;
-    color: black;
-}
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.dropbtn img {
-    width: 50px; /* Adjust the size as needed */
-    height: auto;
-}
+
 /* Adjust header to account for the fixed nav */
 header {
     background-color: rgb(0, 0, 0);
@@ -55,6 +25,7 @@ header {
     margin-left: 300px; /* Ensure header does not overlap with nav */
     margin-right: 300px; /* Ensure header does not overlap with nav */
 }
+
 h1{
     color: goldenrod;
     font-size: 4em;
@@ -82,6 +53,7 @@ section {
     color: rgb(255, 255, 255);
     flex-grow: 1;
     margin-left: 200px; /* Ensure content does not overlap with nav */
+    margin-right: 200px; /* Ensure content does not overlap with nav */
 }
 
 #home {
@@ -90,25 +62,23 @@ section {
     margin-bottom: 400px;
 }
 
-#divlinks {
+.divlinks {
     background-color: rgb(0, 0, 0);
     float: left;
     width: 50%; /* Adjust width to split the section */
-    margin-left: 200px;
 }
-#divrechts {
+.divrechts {
     background-color: rgb(0, 0, 0);
     float: right;
     width: 50%; /* Adjust width to split the section */
-    margin-right: 300px;
-    height: 500px;
+    text-align: center;
+
 }
 
 .portrait img {
-    max-width: 100%; /* Increase the maximum width of the image */;
-    animation: float 2s ease-in-out infinite;
-    border-radius: 300%; /* Make the image round */
-    object-fit: property; /* Ensure the image does not stretch */
+    width: 100%; /* Increase the maximum width of the image */;
+    height: 100%; /* Maintain aspect ratio */;
+    object-fit: cover;
 }
 
 
