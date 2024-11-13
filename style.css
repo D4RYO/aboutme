@@ -72,7 +72,24 @@ section {
     float: right;
     width: 50%; /* Adjust width to split the section */
     text-align: center;
-
+}
+ #typing-text {
+    font-size: 4em;
+    color: goldenrod;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .portrait img {
