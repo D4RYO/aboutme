@@ -81,9 +81,11 @@ section {
 
 #divlinks {
     background-color: slateblue;
+    float: left;
 }
 #divrechts {
     background-color: lightcoral;
+    float: right;
 }
 
 #home .portrait {
