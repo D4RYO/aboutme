@@ -4,7 +4,6 @@ let wordIndex = 0;
 let letterIndex = 0;
 let isDeleting = false;
 let isPausing = false;
-let indicatorVisible = false; // Flag, um zu steuern, ob der Indikator sichtbar bleiben soll
 
 function type() {
     if (isPausing) {
@@ -20,9 +19,7 @@ function type() {
     textElement.innerHTML = `<span style="color: ${getWordColor(wordIndex)}">${displayedText}</span>`;
 
     // Zeige den entsprechenden Emoji-Indikator während des Tippens
-    if (!indicatorVisible || wordIndex === 3) { // Nur, wenn der Indikator noch nicht sichtbar ist oder es "Developer." ist
-        showBlinkingIndicator(wordIndex);
-    }
+    showBlinkingIndicator(wordIndex);
 
     // Wechselt zwischen Tippen und Löschen
     if (!isDeleting && letterIndex === currentWord.length) {
@@ -30,10 +27,9 @@ function type() {
             isPausing = true;
             setTimeout(() => {
                 isPausing = false;
-                wordIndex = (wordIndex + 1) % words.length; // Nächstes Wort
-                letterIndex = 0; // Setze den Buchstabenindex zurück
+                isDeleting = true; // Beginnt das Löschen des Wortes nach 15 Sekunden
                 type(); // Starte das Tippen nach der Pause
-            }, 15000); // 15 Sekunden Pause
+            }, 15000); // 15 Sekunden Pause für das Wort Developer.
         } else {
             setTimeout(() => (isDeleting = true), 1000); // Pause nach dem Schreiben
         }
@@ -68,17 +64,7 @@ function showBlinkingIndicator(index) {
 
     textElement.appendChild(indicator);
 
-    // Setze das Flag, dass der Indikator jetzt sichtbar ist
-    indicatorVisible = true;
-
-    // Entferne den Indikator nach 1 Sekunde, außer bei "Developer."
-    if (index !== 3) {
-        setTimeout(() => {
-            indicator.remove();
-            indicatorVisible = false; // Indikator ist nicht mehr sichtbar
-        }, 1000);
-    }
-}
+   }
 
 // Starte den Typing-Effekt
 type();
