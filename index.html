@@ -1,31 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="typing.js" defer></script>
-<script src="uhrzeit.js" defer></script>
-<script src="flytext.js" defer></script>
-<script src="divanimation.js" defer></script>
-<link rel="stylesheet" href="style.css">
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-    
+    <!-- Stylesheets and Scripts -->
+    <link rel="stylesheet" href="style.css">
+    <script src="typing.js" defer></script>
+    <script src="uhrzeit.js" defer></script>
+    <script src="flytext.js" defer></script>
+    <script src="divanimation.js" defer></script>
 </head>
 
-<body>   
-    <div id="intro-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color:  rgb(255, 0, 230); z-index: 9999; display: flex; justify-content: center; align-items: center; animation: fadeInOut 10s forwards; animation-delay: 3s;">
+<body>
+
+    <!-- Intro Overlays -->
+    <div id="intro-overlay" style="
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+        background-color: rgb(255, 0, 230); z-index: 9999; 
+        display: flex; justify-content: center; align-items: center; 
+        animation: fadeInOut 10s forwards; animation-delay: 3s;">
         <img src="https://1drv.ms/i/s!Ah65jb2ZxJSN3Q_rOQE4mp0xU7vR?embed=1&width=167&height=151" alt="Mein Logo" style="animation: fadeIn 5s forwards;">
     </div>
-    <p></p>
-    <div id="clock" style="color: rgb(0, 0, 0); font-size: 50px;"></div>
 
-    <div id="intro-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color:  rgba(0, 255, 4, 0.75); z-index: 9998; display: flex; justify-content: center; align-items: center; animation: fadeInOut 0.5s forwards; animation-delay: 3.15s;"></div>
+    <div id="intro-overlay" style="
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+        background-color: rgba(0, 255, 4, 0.75); z-index: 9998; 
+        display: flex; justify-content: center; align-items: center; 
+        animation: fadeInOut 0.5s forwards; animation-delay: 3.15s;">
     </div>
-    <div id="intro-overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color:  rgba(0, 68, 255, 0.5); z-index: 9997; display: flex; justify-content: center; align-items: center; animation: fadeInOut 0.5s forwards; animation-delay: 3.3s;"></div>
+
+    <div id="intro-overlay" style="
+        position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
+        background-color: rgba(0, 68, 255, 0.5); z-index: 9997; 
+        display: flex; justify-content: center; align-items: center; 
+        animation: fadeInOut 0.5s forwards; animation-delay: 3.3s;">
     </div>
+
+    <!-- Clock Display -->
+    <div id="clock" style="color: rgb(165, 165, 165); font-size: 50px;"></div>
+
+    <!-- Additional Intro Overlays -->
+    <div id="intro-overlay" style="background-color: rgba(0, 255, 4, 0.75); animation-delay: 3.15s;"></div>
+    <div id="intro-overlay" style="background-color: rgba(0, 68, 255, 0.5); animation-delay: 3.3s;"></div>
+
+    <!-- Header Section -->
     <header>
         <div class="logo">
             <img src="https://1drv.ms/i/s!Ah65jb2ZxJSN3Q_rOQE4mp0xU7vR?embed=1&width=67&height=51" alt="Mein Logo">
@@ -39,204 +59,97 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-</header>
+    </header>
 
+    <!-- Home Section -->
     <section id="home">
-            <div id="divlinks">
+        <div id="divlinks">
             <div class="portrait">
                 <img src="https://1drv.ms/i/s!Ah65jb2ZxJSN3FFMZqSIQOJuh2tV?embed=1&width=768&height=639" alt="Mein Portrait">
-        <style>
-            @keyframes moveUpDown {
-                0%, 100% {
-                    transform: translateY(40);
-                }
-                50% {
-                    transform: translateY(-20px);
-                }
-            }
+                <style>
+                    @keyframes moveUpDown {
+                        0%, 100% {
+                            transform: translateY(40);
+                        }
+                        50% {
+                            transform: translateY(-20px);
+                        }
+                    }
 
-            .portrait img:hover {
-                animation: moveUpDown 1s infinite;
-            }
-        </style>
-        
-        </div>
+                    .portrait img:hover {
+                        animation: moveUpDown 1s infinite;
+                    }
+                </style>
+            </div>
         </div>
         <div id="divrechts">
             <h1>Frontend</h1>
-            <span id="typing-text">
-            </span></p>
+            <span id="typing-text"></span>
             <p><strong>I love transforming creative ideas into interactive experiences as a frontend developer, engaging and connecting users.</strong></p>
-        
+        </div>
     </section>
 
+    <!-- About Me Section -->
     <section id="about-me">
-        <br></br>
-        <br></br>
-        <br></br>
-    
         <h1 class="fly-in-text" style="color: rgb(218, 165, 32);">About Me</h1>
         <p class="fly-in-text" style="color: white;">Informationen über mich</p>
         <p class="fly-in-text" style="color: white;">Link für Lebenslauf Download einfügen</p>
-        <p class="fly-in-text" style="color: white;">Informationen über mich</p>
-        <!-- Additional content to enable scrolling -->
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-
     </section>
+
+    <!-- Projects Section -->
     <section id="projects">
-        <br></br>
-        <br></br>
-        <br></br>
         <h1 class="fly-in-text" style="color: goldenrod;">Projects</h1>
         <p class="fly-in-text" style="color: white;">Projekte Auflisten welche schon gemacht wurden.</p>
-        <p class="fly-in-text" style="color: white;">Procease</p>
-        <p class="fly-in-text" style="color: white;">CareConnect</p>
-        <p class="fly-in-text" style="color: white;">Excel Buchhaltungstool</p>
-        <p class="fly-in-text" style="color: white;">UniForge</p>
-        <!-- Additional content to enable scrolling -->
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-
+        <ul class="fly-in-text" style="color: white;">
+            <li>Procease</li>
+            <li>CareConnect</li>
+            <li>Excel Buchhaltungstool</li>
+            <li>UniForge</li>
+        </ul>
     </section>
+
+    <!-- Skills Section -->
     <section id="skills">
-        <br></br>
-        <br></br>
-        <br></br>
         <h1 class="fly-in-text" style="color: goldenrod;">Skills</h1>
-        <p class="fly-in-text" style="color: white;">My skills.</p>
-        <p class="fly-in-text" style="color: white;">Excel</p>
-        <p class="fly-in-text" style="color: white;">Java</p>
-        <p class="fly-in-text" style="color: white;">All die, die auch auf GitHub aufgeführt sind</p>
-        <!-- Additional content to enable scrolling -->
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-
+        <ul class="fly-in-text" style="color: white;">
+            <li>Excel</li>
+            <li>Java</li>
+            <li>All die, die auch auf GitHub aufgeführt sind</li>
+        </ul>
     </section>
+
+    <!-- Contact Section -->
     <section id="contact">
+        <h1 class="fly-in-text" style="color: goldenrod; text-align: center;">Contact</h1>
 
-        <br></br>
-        <br></br>
-        
-        <br></br>
-
-//Contact Überschrift zentriert
-    <div style="display: flex; justify-content: center;">
-        <div id="contactlinks" style="flex: 1; padding: 10px;"></div>
-        <div id="contactmitte" style="flex: 1; padding: 10px; text-align: center;">
-            <h1 class="fly-in-text" style="color: goldenrod;">Contact</h1>
+        <!-- Contact Form -->
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <form style="width: 50%; color: goldenrod;">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="subject">Betreff:</label><br>
+                <input type="text" id="subject" name="subject"><br><br>
+                <label for="email">Absender Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="message">Text:</label><br>
+                <textarea id="message" name="message" rows="4"></textarea><br><br>
+                <input type="submit" value="Absenden">
+            </form>
         </div>
-        <div id="contactrechts" style="flex: 1; padding: 10px;"></div>
-    </div>
-        <!-- Additional content to enable scrolling -->
-       
 
-//Contact Formular
-            <div style="display: flex; justify-content: space-around;">
-                <div style="flex: 1; padding: 10px;"></div>
-                <div style="flex: 1; padding: 10px; color: goldenrod;">
-                    <form>
-                        <label for="name">Name:</label><br>
-                        <input type="text" id="name" name="name" style="width: 100%; border: 1px solid goldenrod; color: goldenrod;"><br><br>
-                        <label for="subject">Betreff:</label><br>
-                        <input type="text" id="subject" name="subject" style="width: 100%; border: 1px solid goldenrod; color: goldenrod;"><br><br>
-                        <label for="email">Absender Email:</label><br>
-                        <input type="email" id="email" name="email" style="width: 100%; border: 1px solid goldenrod; color: goldenrod;"><br><br>
-                        <label for="message">Text:</label><br>
-                        <textarea id="message" name="message" rows="4" style="width: 100%; border: 1px solid goldenrod; color: goldenrod;"></textarea><br><br>
-                        <input type="submit" value="Absenden" style="background-color: goldenrod; color: white; border: none; padding: 10px 20px; align-self: center;">
-                    </form>
-                </div>
-                <div style="flex: 1; padding: 10px;"></div>
-            </div>
-
-
-
-//Social Media Links
-        <div style="display: flex; justify-content: space-around;">
-            <div id="divgithub" style="flex: 1; padding: 10px;">
-                <h2 style="color: goldenrod;"><a href = "https://github.com/D4RYO" style="color: goldenrod;"">Github</a></h2>
-            </div>
-            <div id="divlinkedin" style="flex: 1; padding: 10px;">
-                <h2 style="color: goldenrod;"><a href = "https://www.linkedin.com" style="color: goldenrod;"">LinkedIn</a></h2>
-            </div>
-            <div id="divinstagram" style="flex: 1; padding: 10px;">
-            <h2 style="color: goldenrod;"><a href = "https://www.instagram.com/yourprofile" style="color: goldenrod;"">Instagram</a></h2>
-            </div>
+        <!-- Social Media Links -->
+        <div style="display: flex; justify-content: space-around; margin-top: 20px;">
+            <a href="https://github.com/D4RYO" style="color: goldenrod;">GitHub</a>
+            <a href="https://www.linkedin.com" style="color: goldenrod;">LinkedIn</a>
+            <a href="https://www.instagram.com/yourprofile" style="color: goldenrod;">Instagram</a>
         </div>
-        <p>.</p>
-        <p>.</p>
-        
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-        <p>.</p>
-
     </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2023 My Portfolio</p>
     </footer>
+
 </body>
-</html> 
+
+</html>

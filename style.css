@@ -2,73 +2,84 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    background-color: rgb(0, 0, 0);
-    flex-direction: column; /* Ensure body content is vertical */
-}
-
-/* Adjust header to account for the fixed nav */
-header {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: calc(100% - 400px); /* Adjust width to match section margins */
-    position: fixed;
-    margin-left: 200px; /* Ensure header does not overlap with nav */
-    margin-right: 200px; /* Ensure header does not overlap with nav */
-}
-/*Fadein vom Logo im Div */
+/* Animationen */
 @keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
+
 @keyframes fadeInOut {
     0% { opacity: 1; }
     50% { opacity: 1; }
-    100% { opacity: 0; transform: translateX(-100%); }
+    100% { 
+        opacity: 0; 
+        transform: translateX(-100%); 
+    }
 }
 
-h1{
-    color: goldenrod;
-    font-size: 5em;
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin-top: 0px;
-    margin-bottom: 0px;
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Allgemeines Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+}
+
+/* Header */
+header {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: calc(100% - 400px);
+    margin: 0 200px;
 }
 
 header .logo img {
     max-width: 100%;
     height: auto;
 }
+
+h1 {
+    color: goldenrod;
+    font-size: 5em;
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+/* Navigation */
 nav ul {
-    list-style-type: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
-nav ul li {
-    float: left;
-}
+
 nav ul li a {
     display: block;
-    color: rgb(255, 255, 255);
+    color: white;
     font-weight: bold;
     padding: 14px 16px;
     text-decoration: none;
 }
+
 nav ul li a:hover {
     color: goldenrod;
 }
 
-
+/* Sektionen */
 section {
-    margin-left: 200px; /* Ensure content does not overlap with nav */
-    margin-right: 200px; /* Ensure content does not overlap with nav */
-
+    margin: 0 200px;
 }
 
 .fly-in-text {
@@ -83,69 +94,48 @@ section {
 }
 
 #home {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     color: white;
-    display: flex; /* Use flexbox to split the section */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 200px;
-    padding-bottom: 200px;
-
+    padding: 200px 0;
 }
+
 #divlinks, #divrechts {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     flex: 1;
     margin: 10px;
 }
 
- #typing-text {
+#typing-text {
     font-size: 4em;
     font-weight: 900;
     line-height: 1.1;
     letter-spacing: -0.03em;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-@keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    margin: 10px 0;
 }
 
+/* Portrait */
 .portrait img {
-    width: 100%; /* Increase the maximum width of the image */;
-    height: 100%; /* Maintain aspect ratio */;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-
-#about-me {
-    background-color: rgb(0, 0, 0);;
-    margin-top: 100px;
-}
-
-#projects {
-    background-color: rgb(0, 0, 0);
-    margin-top: 100px;
-}
-
-#skills {
-    background-color: rgb(0, 0, 0);
-    margin-top: 100px;
-}
-
+/* Sektionen: About, Projekte, Skills, Kontakt */
+#about-me,
+#projects,
+#skills,
 #contact {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     margin-top: 100px;
 }
-#divgithub, #divlinkedin, #divinstagram {
+
+/* Kontakt */
+#divgithub,
+#divlinkedin,
+#divinstagram {
     flex: 1;
     margin: 10px;
     display: flex;
@@ -153,12 +143,12 @@ section {
     align-items: center;
 }
 
-
+/* Footer */
 footer {
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     color: white;
     text-align: center;
     padding: 10px;
-    width: calc(100% - 100px); /* Adjust width to leave more space for the nav */
-    margin-right: 100px; /* Ensure footer does not overlap with nav */
+    width: calc(100% - 100px);
+    margin-right: 100px;
 }
