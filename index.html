@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <script src="typing.js" defer></script>
+<script src="uhrzeit.js" defer></script>
 <link rel="stylesheet" href="style.css">
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,8 +14,8 @@
 </head>
 
 <body>
-
-<header>
+    <div id="clock" style="color: rgb(3, 3, 3); font-size: 150px;"></div>
+    <header>
         <div class="logo">
             <img src="https://1drv.ms/i/s!Ah65jb2ZxJSN3Q_rOQE4mp0xU7vR?embed=1&width=67&height=51" alt="Mein Logo">
         </div>
@@ -54,30 +55,6 @@
         <!-- Additional content to enable scrolling -->
         <p>.</p>
         <p>.</p>
-        <div id="clock" style="color: rgb(3, 3, 3); font-size: 150px;"></div>
-        
-        
-        <script>
-            function updateClock() {
-                const now = new Date();
-                const hours = String(now.getHours()).padStart(2, '0');
-                const minutes = String(now.getMinutes()).padStart(2, '0');
-                const seconds = String(now.getSeconds()).padStart(2, '0');
-                document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-            }
-            setInterval(updateClock, 1000);
-            updateClock();
-        const clockElement = document.getElementById('clock');
-        clockElement.style.position = 'fixed';
-        clockElement.style.left = '0';
-        clockElement.style.top = '50%';
-        clockElement.style.transform = 'translateY(50%)';
-        clockElement.style.writingMode = 'vertical-rl';
-        clockElement.style.rotate = '180deg';
-        clockElement.style.textAlign = 'center';
-        </script>
-
-
         <p>.</p>
         <p>.</p>
         <p>.</p>
