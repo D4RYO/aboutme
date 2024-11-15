@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     flex-direction: column; /* Ensure body content is vertical */
 }
 
@@ -14,17 +14,16 @@ body {
 header {
     background-color: rgb(0, 0, 0);
     color: white;
-    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width:fit-content
-    top: 0;
-    z-index: 1000;
-    position: relative;
-    margin-left: 300px; /* Ensure header does not overlap with nav */
-    margin-right: 300px; /* Ensure header does not overlap with nav */
+    width: calc(100% - 400px); /* Adjust width to match section margins */
+    position: fixed;
+    margin-left: 200px; /* Ensure header does not overlap with nav */
+    margin-right: 200px; /* Ensure header does not overlap with nav */
 }
+
+
 
 h1{
     color: goldenrod;
@@ -36,46 +35,52 @@ h1{
     margin-bottom: 0px;
 }
 
-header .logo {
-    font-size: 1.5em;
-    flex-shrink: 0;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
 header .logo img {
     max-width: 100%;
     height: auto;
 }
+nav ul {
+    list-style-type: none;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+nav ul li a:hover {
+    color: goldenrod;
+}
+
 
 section {
-    padding: 20px;
-    color: rgb(255, 255, 255);
-    flex-grow: 1;
     margin-left: 200px; /* Ensure content does not overlap with nav */
     margin-right: 200px; /* Ensure content does not overlap with nav */
 }
 
+
 #home {
     background-color: rgb(0, 0, 0);
+    color: white;
     display: flex; /* Use flexbox to split the section */
-    margin-bottom: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+#divlinks, #divrechts {
+    background-color: rgb(0, 0, 0);
+    flex: 1;
+    margin: 10px;
 }
 
-.divlinks {
-    background-color: rgb(0, 0, 0);
-    float: left;
-    width: 50%; /* Adjust width to split the section */
-}
-.divrechts {
-    background-color: rgb(0, 0, 0);
-    float: right;
-    width: 50%; /* Adjust width to split the section */
-    text-align: center;
-}
  #typing-text {
     font-size: 4em;
-    color: goldenrod;
     font-weight: 900;
     line-height: 1.1;
     letter-spacing: -0.03em;

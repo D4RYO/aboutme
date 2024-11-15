@@ -68,3 +68,4 @@ function showBlinkingIndicator(index) {
 
 // Starte den Typing-Effekt
 type();
+
