@@ -2,6 +2,7 @@
 <html lang="en">
 <script src="typing.js" defer></script>
 <script src="uhrzeit.js" defer></script>
+<script src="flytext.js" defer></script>
 <link rel="stylesheet" href="style.css">
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,10 +15,11 @@
 </head>
 
 <body>
-    <div id="clock" style="color: rgb(3, 3, 3); font-size: 150px;"></div>
+    <div id="clock" style="color: rgb(48, 48, 48); font-size: 50px;"></div>
     <header>
         <div class="logo">
             <img src="https://1drv.ms/i/s!Ah65jb2ZxJSN3Q_rOQE4mp0xU7vR?embed=1&width=67&height=51" alt="Mein Logo">
+            <span style="font-size: 1em; color: goldenrod;"><strong>Dario Knezevic</strong></span>
         </div>
         <nav>
             <ul>
@@ -49,9 +51,24 @@
         <br></br>
         <br></br>
         <br></br>
-        <h1>About Me</h1>
-        <p style="color: white;">Informationen über mich</p>
-        <p style="color: white;">Link für Lebenslauf Download einfügen</p>
+    
+        <style>
+            .fly-in-text {
+                opacity: 0;
+                transform: translateX(-100%);
+                transition: transform 1s, opacity 1s;
+            }
+
+            .fly-in-text.visible {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        </style>
+
+        <h1 class="fly-in-text" style="color: goldenrod;">About Me</h1>
+        <p class="fly-in-text" style="color: white;">Informationen über mich</p>
+        <p class="fly-in-text" style="color: white;">Link für Lebenslauf Download einfügen</p>
+        <p class="fly-in-text" style="color: white;">Informationen über mich</p>
         <!-- Additional content to enable scrolling -->
         <p>.</p>
         <p>.</p>
@@ -86,12 +103,12 @@
         <br></br>
         <br></br>
         <br></br>
-        <h1>Projects</h1>
-        <p style="color: white;">Projekte Auflisten welche schon gemacht wurden.</p>
-        <p style="color: white;">Procease</p>
-        <p style="color: white;">CareConnect</p>
-        <p style="color: white;">Excel Buchhaltungstool</p>
-        <p style="color: white;">UniForge</p>
+        <h1 class="fly-in-text" style="color: goldenrod;">Projects</h1>
+        <p class="fly-in-text" style="color: white;">Projekte Auflisten welche schon gemacht wurden.</p>
+        <p class="fly-in-text" style="color: white;">Procease</p>
+        <p class="fly-in-text" style="color: white;">CareConnect</p>
+        <p class="fly-in-text" style="color: white;">Excel Buchhaltungstool</p>
+        <p class="fly-in-text" style="color: white;">UniForge</p>
         <!-- Additional content to enable scrolling -->
         <p>.</p>
         <p>.</p>
@@ -120,11 +137,11 @@
         <br></br>
         <br></br>
         <br></br>
-        <h1>Skills</h1>
-        <p style="color: white;">My skills.</p>
-        <p style="color: white;">Excel</p>
-        <p style="color: white;">Java</p>
-        <p style="color: white;">All die, die auch auf GitHub aufgeführt sind</p>
+        <h1 class="fly-in-text" style="color: goldenrod;">Skills</h1>
+        <p class="fly-in-text" style="color: white;">My skills.</p>
+        <p class="fly-in-text" style="color: white;">Excel</p>
+        <p class="fly-in-text" style="color: white;">Java</p>
+        <p class="fly-in-text" style="color: white;">All die, die auch auf GitHub aufgeführt sind</p>
         <!-- Additional content to enable scrolling -->
         <p>.</p>
         <p>.</p>
@@ -152,11 +169,11 @@
         <br></br>
         <br></br>
         <br></br>
-        <h1>Contact</h1>
-        <p style="color: white;">How to contact me.</p>
-        <p style="color: white;">Kontaktfenster mit Mail</p>
-        <p style="color: white;">LinkedIn</p>
-        <p style="color: white;">Instagram</p>
+        <h1 class="fly-in-text" style="color: goldenrod;">Contact</h1>
+        <p class="fly-in-text" style="color: white;">How to contact me.</p>
+        <p class="fly-in-text" style="color: white;">Kontaktfenster mit Mail</p>
+        <p class="fly-in-text" style="color: white;">LinkedIn</p>
+        <p class="fly-in-text" style="color: white;">Instagram</p>
         <!-- Additional content to enable scrolling -->
         <p>.</p>
         <p>.</p>
