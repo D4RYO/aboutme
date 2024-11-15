@@ -6,13 +6,13 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
-    background-color: rgb(38, 26, 165);
+    background-color: rgb(0, 0, 0);
     flex-direction: column; /* Ensure body content is vertical */
 }
 
 /* Adjust header to account for the fixed nav */
 header {
-    background-color: rgb(61, 39, 8);
+    background-color: rgb(0, 0, 0);
     color: white;
     display: flex;
     align-items: center;
@@ -83,7 +83,7 @@ section {
 }
 
 #home {
-    background-color: rgb(187, 112, 112);
+    background-color: rgb(0, 0, 0);
     color: white;
     display: flex; /* Use flexbox to split the section */
     display: flex;
@@ -94,7 +94,7 @@ section {
 
 }
 #divlinks, #divrechts {
-    background-color: rgb(136, 33, 33);
+    background-color: rgb(0, 0, 0);
     flex: 1;
     margin: 10px;
 }
@@ -127,22 +127,22 @@ section {
 
 
 #about-me {
-    background-color: rgb(53, 123, 54);;
+    background-color: rgb(0, 0, 0);;
     margin-top: 100px;
 }
 
 #projects {
-    background-color: rgb(40, 98, 109);
+    background-color: rgb(0, 0, 0);
     margin-top: 100px;
 }
 
 #skills {
-    background-color: rgb(157, 54, 157);
+    background-color: rgb(0, 0, 0);
     margin-top: 100px;
 }
 
 #contact {
-    background-color: rgb(83, 83, 83);
+    background-color: rgb(0, 0, 0);
     margin-top: 100px;
 }
 #divgithub, #divlinkedin, #divinstagram {
