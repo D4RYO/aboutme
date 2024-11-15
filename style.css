@@ -22,8 +22,16 @@ header {
     margin-left: 200px; /* Ensure header does not overlap with nav */
     margin-right: 200px; /* Ensure header does not overlap with nav */
 }
-
-
+/*Fadein vom Logo im Div */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeInOut {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    100% { opacity: 0; transform: translateX(-100%); }
+}
 
 h1{
     color: goldenrod;
@@ -83,6 +91,7 @@ section {
     align-items: center;
     padding-top: 200px;
     padding-bottom: 200px;
+
 }
 #divlinks, #divrechts {
     background-color: rgb(136, 33, 33);
