@@ -41,6 +41,7 @@ header {
     position: fixed;
     width: calc(100% - 400px);
     margin: 0 200px;
+    z-index: 1000;
 }
 
 header .logo img {
@@ -74,6 +75,10 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    color: goldenrod;
+}
+
+nav ul li a.active {
     color: goldenrod;
 }
 
