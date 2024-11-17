@@ -78,10 +78,21 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
     flex-wrap: wrap;
 }
 .frontend {
-    font-size: 36px;
+    font-size: 2em;
     color: rgb(0, 151, 179);
-    font-weight: bolder;
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
     margin-bottom: 20px;
+}
+.darioknezevic {
+    font-size: 4em;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    margin-top: -10px;
+    margin-bottom: 10px; /* Reduced the margin-bottom */
 }
 
 
@@ -108,11 +119,36 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 
 
 .portrait {
-    width: 80%; /* Adjust the width as needed */
+    width: 100%; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
     border-radius: 100%; /* Make it circular */
     margin-top: 30px;
     margin-left: 40px;
+}
+
+.home-container {
+    height: 100vh; /* Adjust the height as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* Style for homeportrait */
+#homeportrait {
+    margin-left: 300px; /* Set the left margin to 300px */
+}
+
+/* Style for hometext */
+#hometext {
+    margin-right: 300px; /* Set the right margin to 300px */
+    align-items: flex-start; /* Align items to the start (left) */
+    flex-direction: column; /* Align items vertically */
+    display: flex; /* Use flexbox for alignment */
+    text-align: left; /* Align text to the left */
+
+    margin-right: 300px; /* Set the right margin to 300px */
 }
     
 #aboutme, #projects, #skills, #contact { /*Sektionen*/
