@@ -14,6 +14,7 @@
     <script src="navscroll.js" defer></script>
     <script src="navmorph.js" defer></script>
     <script src="navhover.js" defer></script>
+    <script src="scrollingText.js" defer></script>
 </head>
 
 <body>
@@ -42,9 +43,8 @@
     </div>
 
 
-    <!-- Additional Intro Overlays -->
-    <div id="intro-overlay" style="background-color: rgba(0, 255, 4, 0.75); animation-delay: 3.15s;"></div>
-    <div id="intro-overlay" style="background-color: rgba(0, 68, 255, 0.5); animation-delay: 3.3s;"></div>
+    
+
 
     <!-- Header Section -->
     <header>
@@ -62,6 +62,11 @@
         </nav>
     </header>
 
+
+
+
+
+
     <!-- Home Section -->
     <section id="home">
         <div id="homeportrait">
@@ -70,24 +75,37 @@
            
         </div>
         <div id="hometext">
-            <h1>Frontend</h1>
-            <span id="typing-text"></span>
+            <h1 class ="frontend">Frontend <span id="typing-text"></span></h1>
             <h1>Hi,</h1>
             <h1>I'm Dario Knezevic.</h1>
             <p><strong>I love transforming creative ideas into interactive experiences</strong></p>
         </div>
     </section>
 
+
+
+
+
+
     <!-- About Me Section -->
     <section id="aboutme">
-        <h1 class="fly-in-text" style="color: rgb(0, 151, 179);">About Me</h1>
+        <div class="überschriftcontainer">
+            <h1 class="überschrift">AboutMe</h1>
+          </div>
         <p class="fly-in-text" style="color: rgb(20, 151, 179);">Informationen über mich</p>
         <p class="fly-in-text" style="color: rgb(0, 151, 179);">Link für Lebenslauf Download einfügen</p>
     </section>
 
+
+
+
+
+
     <!-- Projects Section -->
     <section id="projects">
-        <h1 class="fly-in-text" style="color: goldenrod;">Projects</h1>
+        <div class="überschriftcontainer">
+            <h1 class="überschrift">Projects</h1>
+          </div>
         <p class="fly-in-text" style="color: white;">Projekte Auflisten welche schon gemacht wurden.</p>
         <ul class="fly-in-text" style="color: white;">
             <li>Procease</li>
@@ -97,19 +115,33 @@
         </ul>
     </section>
 
+
+
+
+
+
     <!-- Skills Section -->
     <section id="skills">
-        <h1 class="fly-in-text" style="color: goldenrod;">Skills</h1>
-        <ul class="fly-in-text" style="color: white;">
+        <div class="überschriftcontainer">
+            <h1 class="überschrift">Skills</h1>
+          </div>
+        <ul class="fly-in-text" style="color: rgb(0, 0, 0);">
             <li>Excel</li>
             <li>Java</li>
             <li>All die, die auch auf GitHub aufgeführt sind</li>
         </ul>
     </section>
 
+
+
+
+
+
     <!-- Contact Section -->
     <section id="contact">
-        <h1 class="fly-in-text" style="color: goldenrod; text-align: center;">Contact</h1>
+        <div class="überschriftcontainer">
+            <h1 class="überschrift">Contact</h1>
+          </div>
 
         <!-- Contact Form -->
         <div style="display: flex; justify-content: center; align-items: center;">
@@ -126,6 +158,11 @@
             </form>
         </div>
 
+
+
+
+
+
         <!-- Social Media Links -->
         <div style="display: flex; justify-content: space-around; margin-top: 20px;">
             <a href="https://github.com/D4RYO" style="color: goldenrod;">GitHub</a>
@@ -133,6 +170,11 @@
             <a href="https://www.instagram.com/yourprofile" style="color: goldenrod;">Instagram</a>
         </div>
     </section>
+
+
+
+
+
 
     <!-- Footer -->
     <footer>

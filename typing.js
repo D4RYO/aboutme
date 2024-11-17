@@ -16,7 +16,7 @@ function type() {
         : currentWord.substring(0, letterIndex++);
 
     // Setze die Farbe des aktuellen Wortes
-    textElement.innerHTML = `<span style="color: black ${getWordColor(wordIndex)}">${displayedText}</span>`;
+    textElement.innerHTML = `<span style="color: ${getWordColor(wordIndex)}">${displayedText}</span>`;
 
     // Zeige den entsprechenden Emoji-Indikator während des Tippens
     showBlinkingIndicator(wordIndex);
@@ -46,9 +46,9 @@ function type() {
 // Funktion, um die Farbe für jedes Wort basierend auf dem Index zu wählen
 function getWordColor(index) {
     if (index === 3) {
-        return 'goldenrod'; // Developer in goldenrod
+        return 'rgb(0, 151, 179)'; // Developer in blau
     }
-    return 'white'; // Andere Wörter in weiß
+    return 'black'; // Andere Wörter in schwarz
 }
 
 // Funktion, um den blinkenden Indikator anzuzeigen
@@ -59,13 +59,11 @@ function showBlinkingIndicator(index) {
     indicator.textContent = emojis[index]; // Wähle das Emoji je nach Wort
     indicator.style.fontWeight = 'bold';
     indicator.style.fontSize = '1em';
-    indicator.style.color = 'goldenrod'; // Farbe des Indikators
+    indicator.style.color = 'blue'; // Farbe des Indikators
     indicator.style.animation = 'blink 1s step-end infinite'; // Blinking Animation
 
     textElement.appendChild(indicator);
-
-   }
+}
 
 // Starte den Typing-Effekt
 type();
-
