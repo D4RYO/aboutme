@@ -16,7 +16,7 @@ function type() {
         : currentWord.substring(0, letterIndex++);
 
     // Setze die Farbe des aktuellen Wortes
-    textElement.innerHTML = `<span style="color: ${getWordColor(wordIndex)}">${displayedText}</span>`;
+    textElement.innerHTML = `<span style="color: black ${getWordColor(wordIndex)}">${displayedText}</span>`;
 
     // Zeige den entsprechenden Emoji-Indikator während des Tippens
     showBlinkingIndicator(wordIndex);

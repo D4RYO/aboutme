@@ -2,150 +2,124 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Animationen */
-@keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
-
+/* Animationen für das Intro*/
+@keyframes fadeIn { 0% { opacity: 0; } 100% { opacity: 1; } }
 @keyframes fadeInOut {
     0% { opacity: 1; }
     50% { opacity: 1; }
-    100% { 
-        opacity: 0; 
-        transform: translateX(-100%); 
-    }
+    100% { opacity: 0; transform: translateX(-100%); }
 }
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
+@keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
 /* Allgemeines Styling */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
+    margin: 0; /*Abstand zum Rand*/
+    font-family: Arial, sans-serif; /*Schriftart*/
+    display: flex; /* flexbox */
+    flex-direction: column; /*Ordnet die Divs vertikal an*/
+    background-color: rgb(255, 255, 255); /*Hintergrundfarbe*/
 }
 
 /* Header */
 header {
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    width: calc(100% - 400px);
-    margin: 0 200px;
-    z-index: 1000;
+    background-color: rgb(255, 255, 255); /*Hintergrundfarbe*/
+    position: fixed; /*fixiert den Header oben*/
+    color: rgb(0, 151, 179); /*Schriftfarbe*/
+    font-size: 0.9em; /*Schriftgröße*/
+    display: flex; /* flexbox */
+    align-items: center; /*zentriert die Elemente vertikal*/
+    justify-content: space-between; /*Abstand zwischen den Elementen*/
+    width: 100%; /*Breite 100%*/
+    z-index: 1000; /*z-Index* gib an wie auf welchem Layer es sich befindet */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-header .logo img {
-    max-width: 100%;
-    height: auto;
-}
-
-h1 {
-    color: goldenrod;
-    font-size: 5em;
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin: 0;
-}
-
-/* Navigation */
-nav ul {
+nav ul { /*Navigation*/
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    gap: 0px;
+    margin-right: 300px;
 }
 
-nav ul li a {
-    display: block;
-    color: white;
-    font-weight: bold;
-    padding: 14px 16px;
-    text-decoration: none;
+nav ul li a { /*Navigation Links Formatierung*/
+    color: rgb(0, 0, 0); /*Schriftfarbe*/
+    font-weight: bold; /*Schriftstärke*/
+    font-size: larger; /*Schriftgröße*/
+    padding: 10px 15px; /*Abstand um den Text*/
+    text-decoration: none; /*keine Unterstreichung*/
 }
 
-nav ul li a:hover {
-    color: goldenrod;
+nav ul li a:hover, /*Navigation Links Hover Formatierung*/
+nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
+    color: rgb(0, 151, 179); /*Schriftfarbe*/
 }
 
-nav ul li a.active {
-    color: goldenrod;
+.logoklein {
+    margin-left: 300px;
 }
 
-/* Sektionen */
-section {
-    margin: 0 200px;
-}
-
-.fly-in-text {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: transform 0.5s, opacity 3s;
-}
-
-.fly-in-text.visible {
-    opacity: 1;
-    transform: translateX(0);
-}
-
-#home {
-    background-color: black;
-    color: white;
+#home { /*Home Sektion*/
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding: 200px 0;
+    gap: 20px;
+    color: rgb(0, 0, 0);
+    min-height: 100vh;
+}
+.h1 {
+    font-size: 72px;
+    color: rgb(0, 151, 179);
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.portrait {
+    width: 80%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 100%; /* Make it circular */
+    margin-top: 30px;
+    margin-left: 40px;
+}
+    
+
+#aboutme {
+background-color: rgb(228, 228, 228);
 }
 
-#divlinks, #divrechts {
-    background-color: black;
-    flex: 1;
-    margin: 10px;
-}
-
-#typing-text {
-    font-size: 4em;
-    font-weight: 900;
-    line-height: 1.1;
-    letter-spacing: -0.03em;
-    margin: 10px 0;
-}
-
-/* Portrait */
-.portrait img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Sektionen: About, Projekte, Skills, Kontakt */
-#about-me,
-#projects,
-#skills,
-#contact {
-    background-color: black;
-    margin-top: 100px;
+#projects {
+    background-color: rgb(0, 0, 0);
 }
 
 /* Kontakt */
-#divgithub,
-#divlinkedin,
-#divinstagram {
-    flex: 1;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+form {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: left;
+    color: goldenrod;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid goldenrod;
+    background-color: black;
+    color: goldenrod;
+    border-radius: 5px;
+}
+
+form input[type="submit"] {
+    background-color: goldenrod;
+    color: black;
+    cursor: pointer;
+    border: none;
+}
+
+form input[type="submit"]:hover {
+    background-color: darkgoldenrod;
 }
 
 /* Footer */
@@ -153,7 +127,69 @@ footer {
     background-color: black;
     color: white;
     text-align: center;
-    padding: 10px;
-    width: calc(100% - 100px);
-    margin-right: 100px;
+    padding: 20px;
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        padding: 0 0px;
+    }
+
+    .logoklein {
+        margin-left: 0;
+    }
+    .portrait {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
+    }
+
+    nav ul {
+        margin-right: 0;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #home {
+        padding: 50px 20px;
+    }
+
+    #divlinks {
+        max-width: 100%;
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #divrechts {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    form input,
+    form textarea {
+        padding: 8px;
+    }
+
+    header .logo img {
+        max-width: 70px;
+    }
+
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 0.9em;
+    }
 }

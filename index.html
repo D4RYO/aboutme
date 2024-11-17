@@ -12,6 +12,8 @@
     <script src="flytext.js" defer></script>
     <script src="divanimation.js" defer></script>
     <script src="navscroll.js" defer></script>
+    <script src="navmorph.js" defer></script>
+    <script src="navhover.js" defer></script>
 </head>
 
 <body>
@@ -19,25 +21,26 @@
     <!-- Intro Overlays -->
     <div id="intro-overlay" style="
         position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-        background-color: rgb(62, 62, 62); z-index: 9999; 
+        background-color: rgb(0, 151, 179); z-index: 9999; 
         display: flex; justify-content: center; align-items: center; 
         animation: fadeInOut 10s forwards; animation-delay: 3s;">
-        <img src="https://1drv.ms/i/s!Ah65jb2ZxJSN3Q_rOQE4mp0xU7vR?embed=1&width=167&height=151" alt="Mein Logo" style="animation: fadeIn 5s forwards;">
+        <img src="./Source/Intro Logo 3d.gif" alt="Mein Logo" style="animation: ">
     </div>
 
     <div id="intro-overlay" style="
         position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-        background-color: rgba(62, 62, 62, 0.75); z-index: 9998; 
+        background-color: rgba(0, 151, 179, 0.75); z-index: 9998; 
         display: flex; justify-content: center; align-items: center; 
         animation: fadeInOut 0.5s forwards; animation-delay: 3.15s;">
     </div>
 
     <div id="intro-overlay" style="
         position: fixed; top: 0; left: 0; width: 100%; height: 100%; 
-        background-color: rgba(62, 62, 62, 0.5); z-index: 9997; 
+        background-color: rgba(0, 151, 179, 0.5); z-index: 9997; 
         display: flex; justify-content: center; align-items: center; 
         animation: fadeInOut 0.5s forwards; animation-delay: 3.3s;">
     </div>
+
 
     <!-- Additional Intro Overlays -->
     <div id="intro-overlay" style="background-color: rgba(0, 255, 4, 0.75); animation-delay: 3.15s;"></div>
@@ -46,12 +49,12 @@
     <!-- Header Section -->
     <header>
         <div class="logo">
-            <img src="https://1drv.ms/i/s!Ah65jb2ZxJSN3Q_rOQE4mp0xU7vR?embed=1&width=67&height=51" alt="Mein Logo">
+            <img src="./Source/Header Logo 3d.gif" class="logoklein" loop="true" autoplay="">
         </div>
         <nav>
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#aboutme">About Me</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -61,37 +64,25 @@
 
     <!-- Home Section -->
     <section id="home">
-        <div id="divlinks">
-            <div class="portrait">
-                <img src="https://1drv.ms/i/s!Ah65jb2ZxJSN3FFMZqSIQOJuh2tV?embed=1&width=768&height=639" alt="Mein Portrait">
-                <style>
-                    @keyframes moveUpDown {
-                        0%, 100% {
-                            transform: translateY(40);
-                        }
-                        50% {
-                            transform: translateY(-20px);
-                        }
-                    }
-
-                    .portrait img:hover {
-                        animation: moveUpDown 1s infinite;
-                    }
-                </style>
-            </div>
+        <div id="homeportrait">
+            <img src="./Source/tittelbild.gif" class="portrait">
         </div>
-        <div id="divrechts">
+           
+        </div>
+        <div id="hometext">
             <h1>Frontend</h1>
             <span id="typing-text"></span>
-            <p><strong>I love transforming creative ideas into interactive experiences as a frontend developer, engaging and connecting users.</strong></p>
+            <h1>Hi,</h1>
+            <h1>I'm Dario Knezevic.</h1>
+            <p><strong>I love transforming creative ideas into interactive experiences</strong></p>
         </div>
     </section>
 
     <!-- About Me Section -->
-    <section id="about-me">
-        <h1 class="fly-in-text" style="color: rgb(218, 165, 32);">About Me</h1>
-        <p class="fly-in-text" style="color: white;">Informationen über mich</p>
-        <p class="fly-in-text" style="color: white;">Link für Lebenslauf Download einfügen</p>
+    <section id="aboutme">
+        <h1 class="fly-in-text" style="color: rgb(0, 151, 179);">About Me</h1>
+        <p class="fly-in-text" style="color: rgb(20, 151, 179);">Informationen über mich</p>
+        <p class="fly-in-text" style="color: rgb(0, 151, 179);">Link für Lebenslauf Download einfügen</p>
     </section>
 
     <!-- Projects Section -->
@@ -122,16 +113,16 @@
 
         <!-- Contact Form -->
         <div style="display: flex; justify-content: center; align-items: center;">
-            <form style="width: 50%; color: goldenrod;">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name"><br><br>
-                <label for="subject">Betreff:</label><br>
-                <input type="text" id="subject" name="subject"><br><br>
-                <label for="email">Absender Email:</label><br>
-                <input type="email" id="email" name="email"><br><br>
-                <label for="message">Text:</label><br>
-                <textarea id="message" name="message" rows="4"></textarea><br><br>
-                <input type="submit" value="Absenden">
+            <form style="width: 80%; color: goldenrod;" action="mailto:dario-knezevic@hotmail.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="subject">Betreff:</label><br>
+            <input type="text" id="subject" name="subject"><br><br>
+            <label for="email">Absender Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="message">Text:</label><br>
+            <textarea id="message" name="message" rows="4"></textarea><br><br>
+            <input type="submit" value="Absenden">
             </form>
         </div>
 
