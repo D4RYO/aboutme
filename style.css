@@ -40,7 +40,7 @@ nav ul { /*Navigation*/
     padding: 0;
     display: flex;
     gap: 0px;
-    margin-right: 300px;
+    margin-right: 280px;
 }
 
 nav ul li a { /*Navigation Links Formatierung*/
@@ -57,6 +57,7 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 }
 
 .logoklein {
+    margin-left: 280px;
 
 }
 
@@ -66,7 +67,7 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
     align-items: center;
     gap: 50px;
     color: rgb(0, 0, 0);
-    min-height: 90vh;
+    min-height: 100vh;
     background-image: url("./Source/hintergrundbild.svg");
     background-position: bottom center;
     background-size: cover;
@@ -74,7 +75,7 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
     background-size: 101%;
     max-height: 50%;
 }
-.homecontainer {
+#homecontainer {
     display: flex;
     justify-content: space-between; /* optional, je nach Wunsch */
     align-items: center;
@@ -89,7 +90,9 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
     justify-content: center;
     align-items: flex-end;
 }
-
+.portrait {
+    border-radius: 100px; 
+}
 
 
 .frontend {
@@ -116,7 +119,7 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 
 .überschriftcontainer {
     display: flex;
-    flex-wrap: wrap;
+    text-align: center;
     margin-left: 300px;
 }
 .überschrift {
@@ -124,6 +127,13 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
     margin-right: 300px;
     color: rgb(255, 255, 255);
     font-weight: bolder;
+}
+
+.aboutcontent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
 }
 
 .intrologo {
@@ -145,7 +155,7 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 
 
 
-#aboutme, #projects, #skills, #contact { /*Sektionen*/
+#projects, #skills, #contact { /*Sektionen*/
     scroll-margin-top:70px ;
     min-height:100vh; /* Jede Sektion nimmt die volle Höhe des Bildschirms ein */
     display: flex; /* Ermöglicht zentrierte Inhalte */
@@ -153,7 +163,29 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 
 }
 #aboutme {
-background-color: rgb(0, 151, 179);
+    scroll-margin-top: 70px;
+    min-height: 100vh; /* Each section takes the full height of the viewport */
+    display: flex; /* Enables flexbox for layout */
+    flex-direction: column; /* Arrange child elements side by side */
+    background-color: rgb(0, 151, 179); /* Background color */
+    gap: 20px; /* Optional spacing between divs */
+}
+
+.aboutmetext {
+    margin-left: 300px;
+    width: 60%;
+}
+
+.aboutgallerie {
+    white-space: nowrap;
+    margin-right: 300px;
+    width: 40%;
+    border-radius: 10px;
+
+}
+
+.aboutgallerie img:hover {
+    transform: scale(1.5);
 }
 
 #projects {
@@ -223,8 +255,6 @@ footer {
         width: 100%;
     }
 
-    }
-
     .logoklein {
         margin-left: 0;
     }
@@ -238,8 +268,6 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
     }
-    
-
     
     #home, #aboutme, #projects, #skills, #contact {
         padding: 50px 20px;
