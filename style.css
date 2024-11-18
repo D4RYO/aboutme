@@ -25,7 +25,7 @@ header {
     background-color: rgb(255, 255, 255); /*Hintergrundfarbe*/
     position: fixed; /*fixiert den Header oben*/
     color: rgb(0, 151, 179); /*Schriftfarbe*/
-    font-size: 0.9em; /*Schriftgröße*/
+    font-size: 1em; /*Schriftgröße*/
     display: flex; /* flexbox */
     align-items: center; /*zentriert die Elemente vertikal*/
     justify-content: space-between; /*Abstand zwischen den Elementen*/
@@ -40,7 +40,6 @@ nav ul { /*Navigation*/
     padding: 0;
     display: flex;
     gap: 0px;
-    margin-right: 280px;
 }
 
 nav ul li a { /*Navigation Links Formatierung*/
@@ -57,7 +56,6 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 }
 
 .logoklein {
-    margin-left: 280px;
 
 }
 
@@ -65,8 +63,7 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    color: rgb(0, 0, 0);
+    gap: 30px;
     min-height: 100vh;
     background-image: url("./Source/hintergrundbild.svg");
     background-position: bottom center;
@@ -75,23 +72,35 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
     background-size: 101%;
     max-height: 50%;
 }
-#homecontainer {
+.homecontainer {
     display: flex;
-    justify-content: space-between; /* optional, je nach Wunsch */
+    justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
     width: 100%;
-    height: 100%;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 #homeportraitbox {
+    flex: 1;
     display: flex;
-    width: 50%;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
 }
+
+#hometextbox {
+    flex: 2;
+    padding-left: 20px;
+    color: #333;
+}
+
+
 .portrait {
-    border-radius: 100px; 
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
 }
 
 
@@ -120,16 +129,14 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 .überschriftcontainer {
     display: flex;
     text-align: center;
-    margin-left: 300px;
 }
 .überschrift {
     font-size: 72px;
-    margin-right: 300px;
     color: rgb(255, 255, 255);
     font-weight: bolder;
 }
 
-.aboutcontent {
+.aboutcontainer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -143,14 +150,7 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 
 
 
-#hometextbox {
-    display: flex;                /* Enable flexbox */
-    width: 50%;
-    flex-direction: column;       /* Stack elements vertically */
-    justify-content: center;      /* Center vertically */
-    align-items: flex-start;          /* Center horizontally */
-    text-align: center;           /* Center-align text */
-}
+
 
 
 
@@ -162,30 +162,53 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
     flex-direction: column; /* Falls du Inhalte vertikal anordnen willst */
 
 }
+
+.skillcontainer {
+    display: grid; /* Enable grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    grid-template-rows: repeat(3, auto); /* Create rows with automatic height */
+    gap: 20px; /* Add spacing between grid items */
+    padding: 20px; /* Add padding around the grid */
+    border-radius: 10px; /* Optional rounded corners */
+}
+
+.skillbox {
+    display: flex; /* Center-align content inside each box */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background-color: rgb(0, 151, 179); /* Box background color */
+    color: white; /* Text color */
+    padding: 20px; /* Inner spacing */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    text-align: center;
+    font-size: 1.2rem; /* Font size for the skill name */
+}
+
+
 #aboutme {
     scroll-margin-top: 70px;
-    min-height: 100vh; /* Each section takes the full height of the viewport */
+    min-height: 95vh; /* Each section takes the full height of the viewport */
     display: flex; /* Enables flexbox for layout */
     flex-direction: column; /* Arrange child elements side by side */
     background-color: rgb(0, 151, 179); /* Background color */
-    gap: 20px; /* Optional spacing between divs */
+    gap: 40px; /* Optional spacing between divs */
+  
+
 }
 
 .aboutmetext {
-    margin-left: 300px;
+    display: flex;
     width: 60%;
 }
 
 .aboutgallerie {
+    display: flex;
     white-space: nowrap;
-    margin-right: 300px;
     width: 40%;
     border-radius: 10px;
 
-}
-
-.aboutgallerie img:hover {
-    transform: scale(1.5);
 }
 
 #projects {
@@ -238,69 +261,92 @@ footer {
     padding: 20px;
 }
 
-
-
-/* Media Queries */
+/* Responsive Anpassungen für Tablets */
 @media (max-width: 768px) {
-    .intrologo {
-        width: 30%; /* Adjust the width as needed */
-        max-width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
-    
     header {
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        padding: 0 0px;
-        width: 100%;
-    }
-
-    .logoklein {
-        margin-left: 0;
-    }
-
-
-    nav ul {
-        margin-right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
     }
 
     nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    #home, #aboutme, #projects, #skills, #contact {
-        padding: 50px 20px;
+        flex-direction: column;
+        gap: 5px;
     }
 
-    #hometext {
-        max-width: 100%;
-        flex: 1 1 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center
-        
+    #homecontainer {
+        flex-direction: column;
+        text-align: center; /* Zentriert den Text auf kleinen Bildschirmen */
     }
-    #hometext {
-        max-width: 100%;
-        flex: 1 1 100%;
+
+    #hometextbox {
+        padding-left: 0; /* Entfernt den linken Abstand */
     }
+
+    #homeportraitbox {
+        margin-bottom: 20px; /* Abstand unten für das Bild */
+    }
+
+
     .überschriftcontainer {
-        margin-left: -5px;
-        margin-top: -60px;
+        margin: 0;
+        text-align: center;
     }
+
     .überschrift {
-        font-size: xx-large;
+        font-size: 48px;
+    }
+    .aboutcontainer {
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
     }
 
-
-
-    header .logo img {
-        max-width: 70px;
+    .skillcontainer {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        margin: 0;
+        padding: 10px;
     }
 
+    .aboutmetext {
+        text-align: center;
+        margin: 0;
+        width: 90%;
+    }
+
+    .aboutgallerie {
+        margin: 0;
+        width: 90%;
+    }
+}
+
+/* Responsive Anpassungen für Smartphones */
+@media (max-width: 480px) {
     nav ul li a {
-        padding: 8px 10px;
-        font-size: 0.9em;
+        font-size: small;
+        padding: 5px;
     }
+
+    .darioknezevic {
+        font-size: 2em;
+    }
+
+    .frontend {
+        font-size: 1.5em;
+    }
+
+    .skillbox {
+        font-size: 1rem;
+    }
+
+    .überschriftcontainer,
+    .aboutmetext,
+    .aboutgallerie,
+    .skillcontainer {
+        margin: 0;
+        padding: 10px;
+    }
+}
+
+
 
