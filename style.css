@@ -147,8 +147,60 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
     animation: fadeIn 1s ease-in-out;
 }
 
+.intro-overlay1 {
+    position: fixed;
+    background-image: url("./Source/Intro Logo 3d.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 100px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 151, 179, 100);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInOut 1s forwards;
+    animation-delay: 3s;
+}
+.intro-overlay1 img {
+    width: 50px;  /* Adjust width as needed */
+    height: auto;  /* Maintain aspect ratio */
+    animation: fadeIn 1s ease-in-out; /* Add animation if required */
+}
 
+.intro-overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 151, 179, 0.75);
+    z-index: 9998;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInOut 0.5s forwards;
+    animation-delay: 3.15s;
+}
 
+.intro-overlay3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 151, 179, 0.5);
+    z-index: 9997;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInOut 0.5s forwards;
+    animation-delay: 3.3s;
+}
 
 
 
@@ -205,9 +257,14 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 
 .aboutgallerie {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     white-space: nowrap;
-    width: 40%;
+    width: 100%;
     border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
 
 }
 
@@ -264,6 +321,7 @@ footer {
 /* Responsive Anpassungen für Tablets */
 @media (max-width: 768px) {
     @media (max-width: 480px) {
+        
         nav ul {
             flex-wrap: nowrap; /* Links umbrechen bei Bedarf */
         }
@@ -272,14 +330,29 @@ footer {
             font-size: 0.8rem; /* Noch kleinere Schrift */
             padding: 5px 10px; /* Weniger Abstand für mobile Geräte */
         }
-    }
+    
     
         .logo img {
             width: 50px; /* Logo-Größe anpassen */
             height: auto;
         }
     
-    
+        #typing-text {
+            font-size: 2rem;
+        }
+
+        .aboutgallerie {
+            flex-direction: column; /* Elemente untereinander ausrichten */
+            align-items: center; /* Zentriert die Galerie-Elemente */
+            width: 100%; /* Nutzt die gesamte verfügbare Breite */
+        }
+        }
+
+     header {
+        width: auto; /* Automatische Breite */
+        margin: 0; /* Optional: Entfernt Ränder */
+         padding: 0; /* Optional: Entfernt Polsterung */
+        }
     nav ul {
         flex-direction: row; /* Vertikale Navigation auf kleinen Bildschirmen */
         justify-content: flex-start; /* Links ausrichten */
@@ -300,20 +373,30 @@ footer {
     }
     .portrait {
         padding-top: -0px;
+        padding-left: 40px;
         padding-bottom: 0;
         width: 50%; /* Bild füllt die gesamte Breite */
     }
 
     #hometextbox {
         width: 100%; /* Breite 100% */
-        margin-top: -200px;
+        margin-top: -180px;
         text-align: center;
     }
 
     #homeportraitbox   
     {
-        width: 90%;
-        margin-top: 50px;
+        width: 80%;
+    }
+
+    #typing-text {
+        font-size: 2rem; /* Größere Schriftgröße */
+    }
+
+    .darioknezevic {
+        margin-top: -550px;
+        font-size: 2rem; /* Größere Schriftgröße */
+        font-weight: 1500;
     }
 
 
@@ -341,11 +424,14 @@ footer {
         text-align: center;
         margin: 0;
         width: 90%;
+        box-sizing: border-box;
     }
 
     .aboutgallerie {
-        margin: 0;
-        width: 90%;
+        flex-direction: row; /* Elemente nebeneinander ausrichten */
+        width: 90%; /* Breite der Galerie anpassen */
+        margin: 0 auto; /* Zentriert die Galerie */
     }
+}
 
-
+    
