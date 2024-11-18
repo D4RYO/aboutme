@@ -60,7 +60,6 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 }
 
 
-
 #home { /*Home Sektion*/
     display: flex;
     justify-content: center;
@@ -252,7 +251,7 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 
 .aboutmetext {
     display: flex;
-    width: 60%;
+    width: 90%;
 }
 
 .aboutgallerie {
@@ -261,7 +260,7 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
     justify-content: center;
     gap: 15px;
     white-space: nowrap;
-    width: 100%;
+    width: %;
     border-radius: 10px;
     box-sizing: border-box;
     padding: 10px;
@@ -312,126 +311,8 @@ form input[type="submit"]:hover {
 
 /* Footer */
 footer {
-    background-color: black;
+    background-color: rgb(166, 33, 33);
     color: white;
     text-align: center;
-    padding: 20px;
 }
 
-/* Responsive Anpassungen für Tablets */
-@media (max-width: 768px) {
-    @media (max-width: 480px) {
-        
-        nav ul {
-            flex-wrap: nowrap; /* Links umbrechen bei Bedarf */
-        }
-    
-        nav ul li a {
-            font-size: 0.8rem; /* Noch kleinere Schrift */
-            padding: 5px 10px; /* Weniger Abstand für mobile Geräte */
-        }
-    
-    
-        .logo img {
-            width: 50px; /* Logo-Größe anpassen */
-            height: auto;
-        }
-    
-        #typing-text {
-            font-size: 2rem;
-        }
-
-        .aboutgallerie {
-            flex-direction: column; /* Elemente untereinander ausrichten */
-            align-items: center; /* Zentriert die Galerie-Elemente */
-            width: 100%; /* Nutzt die gesamte verfügbare Breite */
-        }
-        }
-
-     header {
-        width: auto; /* Automatische Breite */
-        margin: 0; /* Optional: Entfernt Ränder */
-         padding: 0; /* Optional: Entfernt Polsterung */
-        }
-    nav ul {
-        flex-direction: row; /* Vertikale Navigation auf kleinen Bildschirmen */
-        justify-content: flex-start; /* Links ausrichten */
-        gap: 10px; /* Abstand zwischen den Elementen */
-    }
-
-    nav ul li a {
-        font-size: 0.9rem; /* Kleinere Schrift für mobile Geräte */
-    }
-
-    .logo img {
-        width: 50px; /* Logo-Größe anpassen */
-    }
-
-    .homecontainer {
-        flex-direction: column;
-        text-align: center; /* Zentriert den Text auf kleinen Bildschirmen */
-    }
-    .portrait {
-        padding-top: -0px;
-        padding-left: 40px;
-        padding-bottom: 0;
-        width: 50%; /* Bild füllt die gesamte Breite */
-    }
-
-    #hometextbox {
-        width: 100%; /* Breite 100% */
-        margin-top: -180px;
-        text-align: center;
-    }
-
-    #homeportraitbox   
-    {
-        width: 80%;
-    }
-
-    #typing-text {
-        font-size: 2rem; /* Größere Schriftgröße */
-    }
-
-    .darioknezevic {
-        margin-top: -550px;
-        font-size: 2rem; /* Größere Schriftgröße */
-        font-weight: 1500;
-    }
-
-
-    .überschriftcontainer {
-        margin: 0;
-        text-align: center;
-    }
-
-    .überschrift {
-        font-size: 48px;
-    }
-    .aboutcontainer {
-        align-items: center;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .skillcontainer {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        margin: 0;
-        padding: 10px;
-    }
-
-    .aboutmetext {
-        text-align: center;
-        margin: 0;
-        width: 90%;
-        box-sizing: border-box;
-    }
-
-    .aboutgallerie {
-        flex-direction: row; /* Elemente nebeneinander ausrichten */
-        width: 90%; /* Breite der Galerie anpassen */
-        margin: 0 auto; /* Zentriert die Galerie */
-    }
-}
-
-    
