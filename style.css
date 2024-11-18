@@ -27,6 +27,7 @@ header {
     color: rgb(0, 151, 179); /*Schriftfarbe*/
     font-size: 1em; /*Schriftgröße*/
     display: flex; /* flexbox */
+    flex-direction: row;
     align-items: center; /*zentriert die Elemente vertikal*/
     justify-content: space-between; /*Abstand zwischen den Elementen*/
     width: 100%; /*Breite 100%*/
@@ -35,19 +36,22 @@ header {
 }
 
 nav ul { /*Navigation*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    gap: 0px;
+    width: 100%;
 }
 
 nav ul li a { /*Navigation Links Formatierung*/
     color: rgb(0, 0, 0); /*Schriftfarbe*/
     font-weight: bold; /*Schriftstärke*/
-    font-size: larger; /*Schriftgröße*/
+    font-size: 1rem; /*Schriftgröße*/
     padding: 10px 15px; /*Abstand um den Text*/
     text-decoration: none; /*keine Unterstreichung*/
+    transition: color 0.3s; /*Farbübergang beim Hover*/
 }
 
 nav ul li a:hover, /*Navigation Links Hover Formatierung*/
@@ -55,15 +59,13 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
     color: rgb(0, 151, 179); /*Schriftfarbe*/
 }
 
-.logoklein {
 
-}
 
 #home { /*Home Sektion*/
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 50px;
     min-height: 100vh;
     background-image: url("./Source/hintergrundbild.svg");
     background-position: bottom center;
@@ -74,16 +76,17 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 }
 .homecontainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 100px;
     align-items: center;
     max-width: 1200px;
     width: 100%;
-    padding: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 #homeportraitbox {
     flex: 1;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -92,16 +95,13 @@ nav ul li a.active { /*Navigation Links Aktiv Formatierung*/
 
 #hometextbox {
     flex: 2;
-    padding-left: 20px;
+    padding-left: 50px;
+    width: 50%;
     color: #333;
 }
 
 
-.portrait {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 50%;
-}
+
 
 
 .frontend {
@@ -263,28 +263,57 @@ footer {
 
 /* Responsive Anpassungen für Tablets */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
+    @media (max-width: 480px) {
+        nav ul {
+            flex-wrap: nowrap; /* Links umbrechen bei Bedarf */
+        }
+    
+        nav ul li a {
+            font-size: 0.8rem; /* Noch kleinere Schrift */
+            padding: 5px 10px; /* Weniger Abstand für mobile Geräte */
+        }
     }
-
+    
+        .logo img {
+            width: 50px; /* Logo-Größe anpassen */
+            height: auto;
+        }
+    
+    
     nav ul {
-        flex-direction: column;
-        gap: 5px;
+        flex-direction: row; /* Vertikale Navigation auf kleinen Bildschirmen */
+        justify-content: flex-start; /* Links ausrichten */
+        gap: 10px; /* Abstand zwischen den Elementen */
     }
 
-    #homecontainer {
+    nav ul li a {
+        font-size: 0.9rem; /* Kleinere Schrift für mobile Geräte */
+    }
+
+    .logo img {
+        width: 50px; /* Logo-Größe anpassen */
+    }
+
+    .homecontainer {
         flex-direction: column;
         text-align: center; /* Zentriert den Text auf kleinen Bildschirmen */
     }
-
-    #hometextbox {
-        padding-left: 0; /* Entfernt den linken Abstand */
+    .portrait {
+        padding-top: -0px;
+        padding-bottom: 0;
+        width: 50%; /* Bild füllt die gesamte Breite */
     }
 
-    #homeportraitbox {
-        margin-bottom: 20px; /* Abstand unten für das Bild */
+    #hometextbox {
+        width: 100%; /* Breite 100% */
+        margin-top: -200px;
+        text-align: center;
+    }
+
+    #homeportraitbox   
+    {
+        width: 90%;
+        margin-top: 50px;
     }
 
 
@@ -318,35 +347,5 @@ footer {
         margin: 0;
         width: 90%;
     }
-}
-
-/* Responsive Anpassungen für Smartphones */
-@media (max-width: 480px) {
-    nav ul li a {
-        font-size: small;
-        padding: 5px;
-    }
-
-    .darioknezevic {
-        font-size: 2em;
-    }
-
-    .frontend {
-        font-size: 1.5em;
-    }
-
-    .skillbox {
-        font-size: 1rem;
-    }
-
-    .überschriftcontainer,
-    .aboutmetext,
-    .aboutgallerie,
-    .skillcontainer {
-        margin: 0;
-        padding: 10px;
-    }
-}
-
 
 
