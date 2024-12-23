@@ -1,201 +1,673 @@
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <!-- Stylesheets and Scripts -->
-    <link rel="stylesheet" href="style.css">
-    <script src="typing.js" defer></script>
-    <script src="divanimation.js" defer></script>
-    <script src="navscroll.js" defer></script>
-    <script src="navmorph.js" defer></script>
-    <script src="navhover.js" defer></script>
-    <script src="scrollingText.js" defer></script>
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
 
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
+    <script src="./js/typing.js" defer></script>
+    <script src="./js/divanimation.js" defer></script>
+    <script src="./js/navscroll.js" defer></script>
+    <script src="./js/navmorph.js" defer></script>
+    <script src="./js/navhover.js" defer></script>
+    <script src="./js/scrollingText.js" defer></script>
+    <script src="./js/vanila-tilt.js" defer></script>
+    <script src="./js/app.js" defer></script>
+  </head>
+
+  <body>
     <!-- Intro Overlays -->
-    <div class="intro-overlay1">
-    </div>
-
-    <div class="intro-overlay2">
-    </div>
-
-    <div class="intro-overlay3">
-    </div>
-
+    <div class="intro-overlay1"></div>
+    <div class="intro-overlay2"></div>
+    <div class="intro-overlay3"></div>
 
     <!-- Header Section -->
     <header>
-        <div class="logo">
-            <img src="./Source/Header Logo 3d.gif" class="logoklein" loop="true" autoplay="">
-        </div>
-        <nav>
+      <div class="container">
+        <div class="header__wrapper">
+          <div class="logo">
+            <img
+              src="./Source/Header Logo 3d.gif"
+              class="logoklein"
+              loop="true"
+              autoplay=""
+            />
+          </div>
+
+          <div class="nav__social">
+            <a href="https://www.instagram.com/sad_fresh">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/knezevicdario/">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/D4RYO">
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </div>
+
+          <nav class="navbar">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#aboutme">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#aboutme">About</a></li>
+              <li><a href="#exp">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
-        </nav>
+          </nav>
+
+          <div class="hamburger-menu" id="hamburger-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+
+          <!-- Popup Content -->
+          <div class="nav-popup">
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#aboutme">About</a></li>
+              <li><a href="#exp">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Skills</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="nav__social">
+              <a href="https://www.instagram.com/sad_fresh">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/knezevicdario/">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/D4RYO">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
 
-
-
-
-
-
     <!-- Home Section -->
-     
     <section id="home">
-        <div class="homecontainer">
-            <div id="homeportraitbox">
-                <img src="./Source/tittelbild.gif" class="portrait" style="width: 140%; height: 140%; margin: 0; border-radius: 50%;">
-            </div>
-            
-            <div id="hometextbox">
-                <h1 class="frontend">Frontend <span id="typing-text"></span></h1>
-                <h1 class="darioknezevic"> I'm Dario Knezevic.</h1>
-            </div>
-    </section>    
+      <div class="homecontainer">
+        <div id="homeportraitbox">
+          <img src="./Source/tittelbild.gif" class="portrait" />
+        </div>
 
-
-
-
-
+        <div id="hometextbox">
+          <h1 class="frontend">Frontend <span id="typing-text"></span></h1>
+          <h1 class="darioknezevic">I'm Dario Knezevic.</h1>
+        </div>
+      </div>
+    </section>
 
     <!-- About Me Section -->
     <section id="aboutme">
-        <div class="überschriftcontainer">
-            <h1 class="überschrift">AboutMe</h1>
-        </div>
-        <div class="aboutcontainer">
-            <div class="aboutmetext">
-                <p style="color: rgb(255, 255, 255); font-size: 18px; text-align: justify;">My name is Dario Knezevic, and as my last name might suggest, I come from Croatia. Born in Croatia, I moved to Switzerland in 2001, where I’ve since built my life and career. My journey began with an apprenticeship in hotel management, which gave me valuable experience in customer service and the hospitality industry. After completing my apprenticeship, I pursued my Matura, which laid the foundation for my current studies.
+      <div class="aboutcontainer container">
+        <div class="aboutmetext">
+          <div class="überschriftcontainer">
+            <h1 class="überschrift code">About Me</h1>
+          </div>
 
-                Today, I’m studying Business Informatics at the BFH, a field that combines my interest in technology and business. I chose this path because I am passionate about bridging the gap between customers and developers, understanding both their needs and technical solutions. This role allows me to communicate effectively and ensure that both sides are aligned in achieving their goals. I am currently in my 6th semester, focusing on Software Architecture and Design, where I’m developing the skills to design and structure complex software systems.
-                
-                Outside of my academic and professional life, I have a variety of hobbies that keep me active and inspired. I’ve been playing the guitar for many years, which allows me to express my creativity. Traveling is another big passion of mine, as it broadens my perspective and fuels my curiosity about the world. I also love the thrill of riding motorcycles, and enjoy staying active through sports like tennis and golf. These hobbies not only provide me with relaxation but also teach me valuable lessons in discipline, focus, and adaptability.
-                
-                I’m constantly looking for new challenges and opportunities to grow, and I believe my background in both business and technology positions me well to contribute to innovative projects. Whether it's through my studies, hobbies, or future career, I am excited about the opportunities ahead.</p>
+          <p>
+            My name is Dario, and I’m from Split, Croatia. I’m constantly seeking new 
+            challenges and opportunities for growth, which is why I’m passionate about 
+            combining my interest in both business and technology. Currently studying 
+            Wirtschaftsinformatik at BFH Bern, I’m gaining the skills and knowledge needed 
+            to bridge the gap between business needs and technical solutions. I believe 
+            that technology has the power to transform the way we do business, and I’m eager 
+            to be part of this exciting journey.<br><br>
+            When I’m not studying or working on projects, I love to spend my time riding my 
+            Harley Davidson. The open road gives me a sense of freedom and adventure that I 
+            truly enjoy. Traveling is another passion of mine, as it allows me to experience 
+            new cultures, meet interesting people, and expand my worldview. Whether I’m hiking 
+            through scenic landscapes, exploring unfamiliar cities, skiing, or planning my next 
+            adventure, I’m always looking for new experiences that challenge me and help me grow.
+            <br><br>
+            I’m focused on continuous learning and personal development. My studies, hobbies, 
+            and future career goals are all aligned with my desire to embrace new opportunities,
+            especially in the ever-evolving fields of business and technology. I’m excited 
+            about the impact that innovation can have on the world, and I’m committed to 
+            contributing my skills to projects that make a difference.<br><br>
+            If you’d like to know more about me, feel free to download my CV below. 
+            I’m always open to connecting with like-minded individuals and exploring new 
+            possibilities.
+          </p>
+
+            <a href="Source/Lebenslauf 2023.pdf" target="_blank" class="download_cv__btn"
+            >Open CV <i class="fa-solid fa-file-pdf"></i
+          ></a>
         </div>
-        <div class="aboutgallerie">
-                <img src="./gallerie/bild1.png" alt="bild1">
-            </div>
+        <div class="aboutgallerie" data-tilt="will change: transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);">
+          <img src="./gallerie/bild1.png" alt="bild1" />
         </div>
-        </div>
+      </div>
     </section>
 
+    <!-- Experience Section -->
+    <section id="exp" class="experience__section">
+      <div class="container">
+        <div class="überschriftcontainer">
+          <h1 class="überschrift code" style="color: #000">Experience</h1>
+          <p>
+            This section highlights important moments in my journey, showing the roles 
+            I've taken, the challenges I've faced, and the projects that have helped me grow. 
+            I started using GitHub after taking a web engineering class in my studies, 
+            where I learned how version control works and how to collaborate on coding 
+            projects with others. Since then, I’ve been using GitHub to keep track of my 
+            progress, share my work, and improve my coding skills. If you're curious to 
+            see more of my work, check out my GitHub on the right. There, you'll find some 
+            of my latest projects, contributions, and collaborations with others.
+          </p>
+        </div>
 
-
-
-
+        <div class="overview__container">
+          <!-- render overview with label here -->
+          <div class="user-card" data-tilt></div>
+        </div>
+      </div>
+    </section>
 
     <!-- Projects Section -->
     <section id="projects">
-        <div class="überschriftcontainer">
-            <h1 class="überschrift">Projects</h1>
+      <div class="container">
+        <div class="projects__wrapper">
+          <div class="überschriftcontainer">
+            <h1 class="überschrift code">Projects</h1>
           </div>
-        <p class="fly-in-text" style="color: white;">Projekte Auflisten welche schon gemacht wurden.</p>
-        <ul class="fly-in-text" style="color: white;">
-            <li>Procease</li>
-            <li>CareConnect</li>
-            <li>Excel Buchhaltungstool</li>
-            <li>UniForge</li>
-        </ul>
+
+          <!-- projects card wrapper -->
+          <div class="project_card__wrapper">
+            <!-- Card -->
+            <div class="project_card" data-tilt>
+              <img src="./gallerie/project-1.webp" alt="project__image" />
+
+              <div class="project__info">
+                <!-- project title -->
+                <h2 class="pi__title heading">Foodle</h2>
+
+                <!-- techs -->
+                <div class="techs">
+                  <p class="techs__name code">#CSS</p>
+                  <p class="techs__name code">#HTML</p>
+                  <p class="techs__name code">#FIGMA</p>
+                </div>
+
+                <!-- line break -->
+                <hr />
+
+                <!-- Desc -->
+                <p class="pi__desc">
+                  Foodle is a platform that makes sharing and discovering recipes with 
+                  friends and colleagues simple and fun. The responsive design ensures 
+                  that users can easily browse recipes on any device. I worked on creating 
+                  an intuitive interface that encourages engagement and collaboration. 
+                  By fostering a sense of community, Foodle inspires users to explore new 
+                  culinary ideas together.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="project_card" data-tilt>
+              <img src="./gallerie/project-3.png" alt="project__image" />
+
+              <div class="project__info">
+                <!-- project title -->
+                <h2 class="pi__title heading">UniForge</h2>
+
+                <!-- techs -->
+                <div class="techs">
+                  <p class="techs__name code">#CSS</p>
+                  <p class="techs__name code">#HTML</p>
+                  <p class="techs__name code">#SQL</p>
+                  <p class="techs__name code">#FIGMA</p>
+                </div>
+
+                <!-- line break -->
+                <hr />
+
+                <!-- Desc -->
+                <p class="pi__desc">
+                  UniForge enables students to showcase their projects and seek
+                  financial support from peers. I worked on both the front-end
+                  interface and the back-end database, ensuring a user-friendly
+                  experience and secure data handling to foster collaboration
+                  and innovation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="project_card" data-tilt>
+              <img src="./gallerie/project-2.png" alt="project__image" />
+
+              <div class="project__info">
+                <!-- project title -->
+                <h2 class="pi__title heading">CareConnect</h2>
+
+                <!-- techs -->
+                <div class="techs">
+                  <p class="techs__name code">#CSS</p>
+                  <p class="techs__name code">#HTML</p>
+                  <p class="techs__name code">#SQL</p>
+                  <p class="techs__name code">#FIGMA</p>
+                </div>
+
+                <!-- line break -->
+                <hr />
+
+                <!-- Desc -->
+                <p class="pi__desc">
+                  CareConnect is a comprehensive app designed to simplify healthcare by 
+                  enabling users to book doctor appointments, receive messages, and conduct 
+                  video calls with healthcare professionals. This app aims to save time and 
+                  provide convenience for individuals who are sick, allowing them to access 
+                  medical care without leaving their homes. I was responsible for both the 
+                  front-end and back-end web development, ensuring smooth functionality and 
+                  secure data management. Additionally, I used Figma to design a user-friendly 
+                  interface that prioritizes simplicity and accessibility, making it easy for 
+                  users to navigate and interact with their healthcare providers.
+                </p>
+              </div>
+            </div><!-- Card -->
+            <div class="project_card" data-tilt>
+              <img src="./gallerie/project-6.png" alt="project__image" />
+
+              <div class="project__info">
+                <!-- project title -->
+                <h2 class="pi__title heading">Accounting Tool</h2>
+
+                <!-- techs -->
+                <div class="techs">
+                  <p class="techs__name code">#Excel</p>
+                  <p class="techs__name code">#VBA</p>
+                  <p class="techs__name code">#Automation</p>
+                  <p class="techs__name code">#FIGMA</p>
+                </div>
+
+                <!-- line break -->
+                <hr />
+
+                <!-- Desc -->
+                <p class="pi__desc">
+                  The Accounting Tool was developed to help employees efficiently track their 
+                  income and expenses. Built using Excel and enhanced with Studio VBA code, 
+                  the tool offers automated calculations and user-friendly features. 
+                  This project focused on creating a practical and accessible solution 
+                  for managing personal finances.
+                </p>
+              </div>
+            </div><!-- Card -->
+            <div class="project_card" data-tilt>
+              <img src="./gallerie/project-5.png" alt="project__image" />
+
+              <div class="project__info">
+                <!-- project title -->
+                <h2 class="pi__title heading">Carbunique</h2>
+
+                <!-- techs -->
+                <div class="techs">
+                  <p class="techs__name code">#CSS</p>
+                  <p class="techs__name code">#HTML</p>
+                  <p class="techs__name code">#SQL</p>
+                  <p class="techs__name code">#FIGMA</p>
+                </div>
+
+                <!-- line break -->
+                <hr />
+
+                <!-- Desc -->
+                <p class="pi__desc">
+                  Carbunique is a carbonized fruit designed to absorb ethylene from other 
+                  fruits in the basket, helping to keep them fresh for longer. 
+                  I developed both the homepage and a responsive web platform for Olis 
+                  Kohle, handling front-end and back-end web development. This project 
+                  combined innovative design with functionality to showcase the product 
+                  effectively.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card -->
+            <div class="project_card" data-tilt>
+              <img src="./gallerie/project-4.png" alt="project__image" />
+
+              <div class="project__info">
+                <!-- project title -->
+                <h2 class="pi__title heading">Procease</h2>
+
+                <!-- techs -->
+                <div class="techs">
+                  <p class="techs__name code">#HTML</p>
+                  <p class="techs__name code">#CSS</p>
+                  <p class="techs__name code">#SQL</p>
+                </div>
+
+                <!-- line break -->
+                <hr />
+
+                <!-- Desc -->
+                <p class="pi__desc">
+                  Procease is a workplace solution that allows companies to
+                  upload and share instructional videos with their employees. I
+                  handled both front-end and back-end development, ensuring
+                  seamless video uploads and an intuitive interface. The
+                  platform includes a robust system for categorizing and
+                  accessing instructional content efficiently. This project aims
+                  to improve workplace efficiency and empower employees with
+                  clear, accessible guidance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-
-
-
-
 
     <!-- Skills Section -->
     <section id="skills">
+      <div class="container">
         <div class="überschriftcontainer">
-            <h1 class="überschrift">Skills</h1>
+          <h1 class="überschrift code" style="color: #000">Skills</h1>
+        </div>
+      </div>
+
+      <!-- Container -->
+      <div class="slider-container">
+        <div class="skillcontainer">
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+            />
+            <p class="code">HTML</p>
           </div>
-          <div class="skillcontainer">
-            <div class="skillbox">
-                <h3>HTML</h3>
-            </div>
-            <div class="skillbox">
-                <h3>CSS</h3>
-            </div>
-            <div class="skillbox">
-                <h3>JavaScript</h3>
-            </div>
-            <div class="skillbox">
-                <h3>Python</h3>
-            </div>
-            <div class="skillbox">
-                <h3>Java</h3>
-            </div>
-            <div class="skillbox">
-                <h3>React</h3>
-            </div>
-            <div class="skillbox">
-                <h3>SQL</h3>
-            </div>
-            <div class="skillbox">
-                <h3>Git</h3>
-            </div>
-        </div>    </section>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+            />
 
+            <p class="code">CSS</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+            />
+            <p class="code">JavaScript</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+            />
+            <p class="code">Python</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+            />
 
+            <p class="code">Java</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+            />
 
+            <p class="code">React</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+            />
 
+            <p class="code">SQL</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+            />
 
+            <p class="code">Git</p>
+          </div>
+
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+            />
+            <p class="code">HTML</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+            />
+
+            <p class="code">CSS</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+            />
+            <p class="code">JavaScript</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+            />
+            <p class="code">Python</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+            />
+
+            <p class="code">Java</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+            />
+
+            <p class="code">React</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+            />
+
+            <p class="code">SQL</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+            />
+
+            <p class="code">Git</p>
+          </div>
+        </div>
+
+        <div class="skillcontainer skillcontainer-two">
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-plain-wordmark.svg"
+            />
+            <p class="code">Andriod</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aftereffects/aftereffects-original.svg"
+            />
+
+            <p class="code">AfterEffects</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/anaconda/anaconda-original.svg"
+            />
+            <p class="code">Anaconda</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+            />
+            <p class="code">Figma</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apple/apple-original.svg"
+            />
+
+            <p class="code">Apple</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg"
+            />
+
+            <p class="code">Gimp</p>
+        
+          </div>
+
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg"
+            />
+            <p class="code">Trello</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+            />
+
+            <p class="code">VSCode</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/windows11/windows11-original.svg"
+            />
+            <p class="code">Windows</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+            />
+            <p class="code">Python</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+            />
+
+            <p class="code">Java</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
+            />
+
+            <p class="code">React</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg"
+            />
+
+            <p class="code">SQL</p>
+          </div>
+          <div class="skillbox">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+            />
+
+            <p class="code">Git</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Contact Section -->
     <section id="contact">
+      <div class="container">
         <div class="überschriftcontainer">
-            <h1 class="überschrift">Contact</h1>
+          <h1 class="überschrift code" style="color: #000">Contact</h1>
+        </div>
+        <div class="contact__wrapper">
+          <!-- Contact Address -->
+          <div class="address">
+            <img src="./Source/Header Logo 3d.gif" class="logoklein" />
+
+            <p class="address-text heading">Strasse 99</p>
+            <p class="address-text heading">3600 Thun</p>
+            <p class="address-text heading">+41 (0) 768 501 00</p>
+            <p class="address-text heading">info@dario.ch</p>
           </div>
 
-        <!-- Contact Form -->
-        <div style="display: flex; justify-content: center; align-items: center;">
-            <form style="width: 80%; color: goldenrod;" action="mailto:dario-knezevic@hotmail.com" method="post" enctype="text/plain">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br><br>
-            <label for="subject">Betreff:</label><br>
-            <input type="text" id="subject" name="subject"><br><br>
-            <label for="email">Absender Email:</label><br>
-            <input type="email" id="email" name="email"><br><br>
-            <label for="message">Text:</label><br>
-            <textarea id="message" name="message" rows="4"></textarea><br><br>
-            <input type="submit" value="Absenden">
-            </form>
+          <!-- Social Media Links -->
+          <div class="social__links">
+            <a href="https://github.com/D4RYO">GitHub</a>
+            <a href="https://www.linkedin.com/in/knezevicdario/">LinkedIn</a>
+            <a href="https://www.instagram.com/sad_fresh">Instagram</a>
+          </div>
+
+          <!-- Contact Form -->
+          <form
+            action="mailto:dario-knezevic@hotmail.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <label for="name" class="heading">Name:</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="ex: Jhon Doe"
+            />
+            <label for="subject" class="heading">Betreff:</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="ex: inquiry about you"
+            />
+            <label for="email" class="heading">Absender Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="ex: john@test.com"
+            />
+            <label for="message" class="heading">Text:</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              placeholder="ex: Hi, How are you"
+            ></textarea>
+            <button type="submit">Absenden</button>
+          </form>
         </div>
-
-
-
-
-
-
-        <!-- Social Media Links -->
-        <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-            <a href="https://github.com/D4RYO" style="color: goldenrod;">GitHub</a>
-            <a href="https://www.linkedin.com" style="color: goldenrod;">LinkedIn</a>
-            <a href="https://www.instagram.com/yourprofile" style="color: goldenrod;">Instagram</a>
-        </div>
+      </div>
     </section>
-
-
-
-
-
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2023 My Portfolio</p>
+      <p>&copy; 2024, All rights reserved by Dario Knezevic.</p>
     </footer>
-
-</body>
-
+  </body>
 </html>
